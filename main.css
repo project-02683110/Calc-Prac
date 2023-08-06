@@ -26,6 +26,11 @@ button:hover {
     justify-content: center;
     transition: all 0s;
 }
+.lkey {
+    font-size: 16pt;
+    height: 44pt;
+    width: 200pt;
+}
 .key:hover {
     color: black;
     background-color: whitesmoke;
@@ -43,6 +48,10 @@ button:hover {
     border-radius: 8pt;
     left: 50%;
 }
+.lbd {
+    height: 300px;
+    width: 300px;
+}
 .ans:active {
     color: whitesmoke;
     background-color: blue;
@@ -56,6 +65,24 @@ hr {
     text-align: center;
     overflow: visible;
     border-top: 3px double #aaa;
+}
+frac {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+}
+fn {
+    font-size: small;
+    padding: 0 4px;
+    border-bottom: 1px solid #000000;
+}
+fd {
+    font-size: small;
+    padding: 0 4px;
+}
+sup {
+    font-size: 20%;
 }
 article {
     padding: 40px, 8px, 24px;
