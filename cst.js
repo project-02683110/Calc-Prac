@@ -12,7 +12,7 @@ const questions = [
     ['sin120° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '2', 3],
     ['cos120° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '3', 3],
     ['sin150° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '1', 3],
-    ['sin150° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '4', 3],
+    ['cos150° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '4', 3],
     ['sin<sup>2</sup>x ＝ ?', '1＋cos<sup>2</sup>x', '1－cos<sup>2</sup>x', 'cos<sup>2</sup>x－1', '－cos<sup>2</sup>x－1', '2', 4],
     ['cos<sup>2</sup>x ＝ ?', '1＋sin<sup>2</sup>x', '1－sin<sup>2</sup>x', 'sin<sup>2</sup>x－1', '－sin<sup>2</sup>x－1', '2', 4],
     ['<frac><fn>1</fn><fd>cos<sup>2</sup>x</fd></frac> ＝ ?', '1＋tan<sup>2</sup>x', '1－tan<sup>2</sup>x', 'tan<sup>2</sup>x－1', '－tan<sup>2</sup>x－1', '1', 4],
