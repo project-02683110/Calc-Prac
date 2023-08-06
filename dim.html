@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calc-Prac</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='dim.js'></script>
+    </head>
+<body>
+<header style="white-space: nowrap;">
+     けいさんれんしゅうソフト <wbr> Calc-Prac 
+</header>
+<article>
+    <h2 id="Q" style="margin-bottom: -6px;">ERROR</h2>
+    <progress id="timelimit" max="100">70%</progress>
+    <div class="countainer">
+        <div class="keyboard">
+            <button class="key" id="7" onclick="BC('7')">7</button><button class="key" id="8" onclick="BC('8')">8</button><button class="key" id="9" onclick="BC('9')">9</button><br>
+            <button class="key" id="4" onclick="BC('4')">4</button><button class="key" id="5" onclick="BC('5')">5</button><button class="key" id="6" onclick="BC('6')">6</button><br>
+            <button class="key" id="1" onclick="BC('1')">1</button><button class="key" id="2" onclick="BC('2')">2</button><button class="key" id="3" onclick="BC('3')">3</button>
+        </div>
+    </div>
+    <br>
+    <h3>スコア：<span id="score">000</span>点</h3>
+    <hr>
+    <form name="form">
+        <select id="Interval">
+            <!--<option value="1.0">1.0</option>
+            <option value="1.5">1.5</option>-->
+            <option value="2.0">2.0</option>
+            <option value="2.5">2.5</option>
+            <option value="3.0">3.0</option>
+            <option value="3.5">3.5</option>
+            <option value="4.0">4.0</option>
+            <option value="4.5">4.5</option>
+            <option value="5.0">5.0</option>
+        </select>
+        <ruby><rb>秒</rb><rt>びょう</rt></ruby>ごとにきりかえ
+        <br>
+        <ruby><rb>効果音</rb><rt>こうかおん</rt></ruby>
+        <select id="Effect">
+            <option value="F">なし</option>
+            <option value="T">あり</option>
+        </select>
+    </form>
+    <br>
+</article>
+<footer>
+    Created by しおたじゅく
+    <audio id="T">
+        <source src="right.mp3" type="audio/mp3">
+    </audio>
+    <audio id="F">
+        <source src="wrong.mp3" type="audio/mp3">
+    </audio>
+</footer>
+</body>
+</html>
