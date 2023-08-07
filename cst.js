@@ -45,6 +45,10 @@ const questions = [
     ['cos(A－B) ＝ ?', 'sinAcosB＋cosAsinB', 'sinAcosB－cosAsinB', 'cosAcosB＋sinAsinB', 'cosAcosB－sinAsinB', '3', 5],
     ['cos(A＋B) ＝ ?', 'sinAcosB＋cosAsinB', 'sinAcosB－cosAsinB', 'cosAcosB＋sinAsinB', 'cosAcosB－sinAsinB', '4', 5],
     ['tan(A＋B) ＝ ?', '<frac><fn>1＋tanAtanB</fn><fd>tanA－tanB</fd></frac>', '<frac><fn>tanA＋tanB</fn><fd>1－tanAtanB</fd></frac>', '<frac><fn>1－tanAtanB</fn><fd>tanA＋tanB</fd></frac>', '<frac><fn>tanA－tanB</fn><fd>1＋tanAtanB</fd></frac>', '2', 5],
+    ['cos2x ＝ ?', 'sin<sup>2</sup>x＋cos<sup>2</sup>x', 'sin<sup>2</sup>x－cos<sup>2</sup>x', 'cos<sup>2</sup>x－sin<sup>2</sup>x', 'cos<sup>2</sup>x－sin<sup>2</sup>x', '3', 5],
+    ['cos2x ＝ ?', '2sin<sup>2</sup>＋1', '2sin<sup>2</sup>－1', '1－2sin<sup>2</sup>', '1－2sin<sup>2</sup>', '3', 5],
+    ['cos2x ＝ ?', '2cos<sup>2</sup>＋1', '2cos<sup>2</sup>－1', '1－2cos<sup>2</sup>', '1－2cos<sup>2</sup>', '2', 5],
+    ['tan2x ＝ ?', '<frac><fn>2tanx</fn><fd>1＋tan<sup>2</sup>x</fd></frac>', '<frac><fn>2tanx</fn><fd>1－tan<sup>2</sup>x</fd></frac>', '<frac><fn>1＋tan<sup>2</sup>x</fn><fd>2tanx</fd></frac>', '<frac><fn>1－tan<sup>2</sup>x</fn><fd>2tanx</fd></frac>', '2', 5],
     ['sin3x ＝ ?', '4sin<sup>3</sup>x＋3sinx', '3sinx＋4sin<sup>3</sup>x', '4sin<sup>3</sup>x－3sinx', '3sinx－4sin<sup>3</sup>x', '4', 5],
     ['cos3x ＝ ?', '4cos<sup>3</sup>x＋3cosx', '3cosx＋4cos<sup>3</sup>x', '4cos<sup>3</sup>x－3cosx', '3cosx－4cos<sup>3</sup>x', '3', 5]
 ]
