@@ -3,57 +3,23 @@ function rnd(min, max) {
 }
 
 var taptag;
-// 0:Question 1-4:Options 5:Answer 6;Time-limit
-const questions = [
-    ['sin30° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '1', 3],
-    ['cos30° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '2', 3],
-    ['tan30° ＝ ?', '√3', '<frac><fn>1</fn><fd>√3</fd></frac>', '－√3', '－<frac><fn>1</fn><fd>√3</fd></frac>', '2', 3],
-    ['sin60° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '2', 3],
-    ['cos60° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '1', 3],
-    ['tan60° ＝ ?', '√3', '<frac><fn>1</fn><fd>√3</fd></frac>', '－√3', '－<frac><fn>1</fn><fd>√3</fd></frac>', '1', 3],
-    ['sin120° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '2', 3],
-    ['cos120° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '3', 3],
-    ['tan120° ＝ ?', '√3', '<frac><fn>1</fn><fd>√3</fd></frac>', '－√3', '－<frac><fn>1</fn><fd>√3</fd></frac>', '3', 3],
-    ['sin150° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '1', 3],
-    ['cos150° ＝ ?', '<frac><fn>1</fn><fd>2</fd></frac>', '<frac><fn>√3</fn><fd>2</fd></frac>', '－<frac><fn>1</fn><fd>2</fd></frac>', '－<frac><fn>√3</fn><fd>2</fd></frac>', '4', 3],
-    ['tan150° ＝ ?', '√3', '<frac><fn>1</fn><fd>√3</fd></frac>', '－√3', '－<frac><fn>1</fn><fd>√3</fd></frac>', '4', 3],
-    ['sin<sup>2</sup>x ＝ ?', '1＋cos<sup>2</sup>x', '1－cos<sup>2</sup>x', 'cos<sup>2</sup>x－1', '－cos<sup>2</sup>x－1', '2', 4],
-    ['cos<sup>2</sup>x ＝ ?', '1＋sin<sup>2</sup>x', '1－sin<sup>2</sup>x', 'sin<sup>2</sup>x－1', '－sin<sup>2</sup>x－1', '2', 4],
-    ['<frac><fn>1</fn><fd>cos<sup>2</sup>x</fd></frac> ＝ ?', '1＋tan<sup>2</sup>x', '1－tan<sup>2</sup>x', 'tan<sup>2</sup>x－1', '－tan<sup>2</sup>x－1', '1', 4],
-    ['tan<sup>2</sup>x ＝ ?', '1＋<frac><fn>1</fn><fd>cos<sup>2</sup>x</fd></frac>', '1－<frac><fn>1</fn><fd>cos<sup>2</sup>x</fd></frac>', '<frac><fn>1</fn><fd>cos<sup>2</sup>x</fd></frac>－1', '－<frac><fn>1</fn><fd>cos<sup>2</sup>x</fd></frac>－1', '3', 4],
-    ['sin(－x) ＝ ?', 'sinx', 'cosx', '－sinx', '－cosx', '3', 4],
-    ['cos(－x) ＝ ?', 'sinx', 'cosx', '－sinx', '－cosx', '2', 4],
-    ['tan(－x) ＝ ?', 'tanx', '<frac><fn>1</fn><fd>tanx</fd></frac>', '－tanx', '－<frac><fn>1</fn><fd>tanx</fd></frac>', '3', 4],
-    ['sin(180°－x) ＝ ?', 'sinx', 'cosx', '－sinx', '－cosx', '1', 4],
-    ['cos(180°－x) ＝ ?', 'sinx', 'cosx', '－sinx', '－cosx', '4', 4],
-    ['tan(180°－x) ＝ ?', 'tanx', '<frac><fn>1</fn><fd>tanx</fd></frac>', '－tanx', '－<frac><fn>1</fn><fd>tanx</fd></frac>', '3', 4],
-    ['sin(90°－x) ＝ ?', 'sinx', 'cosx', '－sinx', '－cosx', '2', 4],
-    ['cos(90°－x) ＝ ?', 'sinx', 'cosx', '－sinx', '－cosx', '1', 4],
-    ['tan(90°－x) ＝ ?', 'tanx', '<frac><fn>1</fn><fd>tanx</fd></frac>', '－tanx', '－<frac><fn>1</fn><fd>tanx</fd></frac>', '2', 4],
-    ['sin(90°＋x) ＝ ?', 'sinx', 'cosx', '－sinx', '－cosx', '2', 4],
-    ['cos(90°＋x) ＝ ?', 'sinx', 'cosx', '－sinx', '－cosx', '3', 4],
-    ['tan(90°＋x) ＝ ?', 'tanx', '<frac><fn>1</fn><fd>tanx</fd></frac>', '－tanx', '－<frac><fn>1</fn><fd>tanx</fd></frac>', '4', 4],
-    ['sin(180°＋x) ＝ ?', 'sinx', 'cosx', '－sinx', '－cosx', '3', 4],
-    ['cos(180°＋x) ＝ ?', 'sinx', 'cosx', '－sinx', '－cosx', '4', 4],
-    ['tan(180°＋x) ＝ ?', 'tanx', '<frac><fn>1</fn><fd>tanx</fd></frac>', '－tanx', '－<frac><fn>1</fn><fd>tanx</fd></frac>', '1', 4],
-    ['sinAcosB＋cosAsinB ＝ ?', 'sin(A＋B)', 'sin(A－B)', 'cos(A＋B)', 'cos(A－B)', '1', 5],
-    ['sinAcosB－cosAsinB ＝ ?', 'sin(A＋B)', 'sin(A－B)', 'cos(A＋B)', 'cos(A－B)', '2', 5],
-    ['cosAcosB－sinAsinB ＝ ?', 'sin(A＋B)', 'sin(A－B)', 'cos(A＋B)', 'cos(A－B)', '3', 5],
-    ['cosAcosB＋sinAsinB ＝ ?', 'sin(A＋B)', 'sin(A－B)', 'cos(A＋B)', 'cos(A－B)', '4', 5],
-    ['sin(A＋B) ＝ ?', 'sinAcosB＋cosAsinB', 'sinAcosB－cosAsinB', 'cosAcosB＋sinAsinB', 'cosAcosB－sinAsinB', '1', 5],
-    ['sin(A－B) ＝ ?', 'sinAcosB＋cosAsinB', 'sinAcosB－cosAsinB', 'cosAcosB＋sinAsinB', 'cosAcosB－sinAsinB', '2', 5],
-    ['cos(A－B) ＝ ?', 'sinAcosB＋cosAsinB', 'sinAcosB－cosAsinB', 'cosAcosB＋sinAsinB', 'cosAcosB－sinAsinB', '3', 5],
-    ['cos(A＋B) ＝ ?', 'sinAcosB＋cosAsinB', 'sinAcosB－cosAsinB', 'cosAcosB＋sinAsinB', 'cosAcosB－sinAsinB', '4', 5],
-    ['tan(A＋B) ＝ ?', '<frac><fn>1＋tanAtanB</fn><fd>tanA－tanB</fd></frac>', '<frac><fn>tanA＋tanB</fn><fd>1－tanAtanB</fd></frac>', '<frac><fn>1－tanAtanB</fn><fd>tanA＋tanB</fd></frac>', '<frac><fn>tanA－tanB</fn><fd>1＋tanAtanB</fd></frac>', '2', 5],
-    ['cos2x ＝ ?', 'sin<sup>2</sup>x＋cos<sup>2</sup>x', 'sin<sup>2</sup>x－cos<sup>2</sup>x', 'cos<sup>2</sup>x－sin<sup>2</sup>x', 'cos<sup>2</sup>x－sin<sup>2</sup>x', '3', 5],
-    ['cos2x ＝ ?', '2sin<sup>2</sup>＋1', '2sin<sup>2</sup>－1', '1－2sin<sup>2</sup>', '1－2sin<sup>2</sup>', '3', 5],
-    ['cos2x ＝ ?', '2cos<sup>2</sup>＋1', '2cos<sup>2</sup>－1', '1－2cos<sup>2</sup>', '1－2cos<sup>2</sup>', '2', 5],
-    ['tan2x ＝ ?', '<frac><fn>2tanx</fn><fd>1＋tan<sup>2</sup>x</fd></frac>', '<frac><fn>2tanx</fn><fd>1－tan<sup>2</sup>x</fd></frac>', '<frac><fn>1＋tan<sup>2</sup>x</fn><fd>2tanx</fd></frac>', '<frac><fn>1－tan<sup>2</sup>x</fn><fd>2tanx</fd></frac>', '2', 5],
-    ['sin3x ＝ ?', '4sin<sup>3</sup>x＋3sinx', '3sinx＋4sin<sup>3</sup>x', '4sin<sup>3</sup>x－3sinx', '3sinx－4sin<sup>3</sup>x', '4', 5],
-    ['cos3x ＝ ?', '4cos<sup>3</sup>x＋3cosx', '3cosx＋4cos<sup>3</sup>x', '4cos<sup>3</sup>x－3cosx', '3cosx－4cos<sup>3</sup>x', '3', 5]
-]
-
 var A;
+var rndArray = ['answer', 'opt1', 'opt2', 'opt3'];
+let data;
+fetchData();
+
+async function fetchData() {
+    try {
+        const jsondata = await fetch('sct.json');
+        data = await jsondata.json();
+        main();
+    } catch (error) {
+        console.error('Error loading JSON file:', error);
+    }
+}
+//setInterval(() => {
+//    console.log(taptag);
+//}, 500);
 
 function main() {
     var elements = document.getElementsByClassName('ans');
@@ -67,16 +33,16 @@ function main() {
     var timelimit = document.getElementById('timelimit');
     var a
     do {
-        a = Math.floor(Math.random() * (questions.length));
+        a = Math.floor(Math.random() * (data.length));
     } while (A == a);
-    Q.innerHTML = questions[a][0];
+    Q.innerHTML = data[a].question;
+    rndArray = shuffle(rndArray);
     var options = document.getElementsByClassName('lkey');
     for (var i = 0; i < options.length; i++) {
-        options[i].innerHTML = questions[a][i + 1];
+        options[i].innerHTML = data[a][rndArray[i]];
+        if (rndArray[i] == 'answer') options[i].classList.add('ans');
     }
-    var ansitem = document.getElementById(String(questions[a][5]));
-    ansitem.classList.add('ans');
-    window.setTimeout(main, questions[a][6] * 1000);
+    window.setTimeout(main, Number(data[a].timelimit) * 1000);
     A = a;
     taptag = false;
     var t = 0;
@@ -88,7 +54,7 @@ function main() {
             timelimit.value = t;
             console.log(t);
         }
-    }, questions[a][6] * 10);
+    }, Number(data[a].timelimit) * 10);
 }
 
 function aPlay(file) {
@@ -124,9 +90,12 @@ function BC(e) {
     }
 }
 
-window.onload = function() {
-    main();
-    setInterval(() => {
-        console.log(taptag);
-    }, 500);
-}
+function shuffle(array) {
+    for(let i = (array.length - 1); 0 < i; i--){
+      let r = Math.floor(Math.random() * (i + 1));
+      let tmp = array[i];
+      array[i] = array[r];
+      array[r] = tmp;
+    }
+    return array;
+  }

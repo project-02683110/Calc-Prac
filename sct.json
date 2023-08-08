@@ -1,0 +1,370 @@
+[
+	{
+		"question":"sin30°＝ ?",
+		"answer":"<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt1":"<frac><fn>√3</fn><fd>2</fd></frac>",
+		"opt2":"－<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt3":"－<frac><fn>√3</fn><fd>2</fd></frac>",
+		"timelimit":"3"
+	},
+	{
+		"question":"cos30°＝ ?",
+		"answer":"<frac><fn>√3</fn><fd>2</fd></frac>",
+		"opt1":"<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt2":"－<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt3":"－<frac><fn>√3</fn><fd>2</fd></frac>",
+		"timelimit":"3"
+	},
+	{
+		"question":"tan30°＝ ?",
+		"answer":"<frac><fn>1</fn><fd>√3</fd></frac>",
+		"opt1":"√3",
+		"opt2":"－√3",
+		"opt3":"－<frac><fn>1</fn><fd>√3</fd></frac>",
+		"timelimit":"3"
+	},
+	{
+		"question":"sin60°＝ ?",
+		"answer":"<frac><fn>√3</fn><fd>2</fd></frac>",
+		"opt1":"<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt2":"－<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt3":"－<frac><fn>√3</fn><fd>2</fd></frac>",
+		"timelimit":"3"
+	},
+	{
+		"question":"cos60°＝ ?",
+		"answer":"<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt1":"<frac><fn>√3</fn><fd>2</fd></frac>",
+		"opt2":"－<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt3":"－<frac><fn>√3</fn><fd>2</fd></frac>",
+		"timelimit":"3"
+	},
+	{
+		"question":"tan60°＝ ?",
+		"answer":"√3",
+		"opt1":"<frac><fn>1</fn><fd>√3</fd></frac>",
+		"opt2":"－√3",
+		"opt3":"－<frac><fn>1</fn><fd>√3</fd></frac>",
+		"timelimit":"3"
+	},
+	{
+		"question":"sin120°＝ ?",
+		"answer":"<frac><fn>√3</fn><fd>2</fd></frac>",
+		"opt1":"<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt2":"－<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt3":"－<frac><fn>√3</fn><fd>2</fd></frac>",
+		"timelimit":"3"
+	},
+	{
+		"question":"cos120°＝ ?",
+		"answer":"－<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt1":"<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt2":"<frac><fn>√3</fn><fd>2</fd></frac>",
+		"opt3":"－<frac><fn>√3</fn><fd>2</fd></frac>",
+		"timelimit":"3"
+	},
+	{
+		"question":"tan120°＝ ?",
+		"answer":"－√3",
+		"opt1":"√3",
+		"opt2":"<frac><fn>1</fn><fd>√3</fd></frac>",
+		"opt3":"－<frac><fn>1</fn><fd>√3</fd></frac>",
+		"timelimit":"3"
+	},
+	{
+		"question":"sin150°＝ ?",
+		"answer":"<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt1":"<frac><fn>√3</fn><fd>2</fd></frac>",
+		"opt2":"－<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt3":"－<frac><fn>√3</fn><fd>2</fd></frac>",
+		"timelimit":"3"
+	},
+	{
+		"question":"cos150°＝ ?",
+		"answer":"－<frac><fn>√3</fn><fd>2</fd></frac>",
+		"opt1":"<frac><fn>1</fn><fd>2</fd></frac>",
+		"opt2":"<frac><fn>√3</fn><fd>2</fd></frac>",
+		"opt3":"－<frac><fn>1</fn><fd>2</fd></frac>",
+		"timelimit":"3"
+	},
+	{
+		"question":"tan150°＝ ?",
+		"answer":"－<frac><fn>1</fn><fd>√3</fd></frac>",
+		"opt1":"√3",
+		"opt2":"<frac><fn>1</fn><fd>√3</fd></frac>",
+		"opt3":"－√3",
+		"timelimit":"3"
+	},
+	{
+		"question":"sin<sup>2</sup>A＝ ?",
+		"answer":"1－cos<sup>2</sup>A",
+		"opt1":"1＋cos<sup>2</sup>A",
+		"opt2":"cos<sup>2</sup>A－1",
+		"opt3":"－cos<sup>2</sup>A－1",
+		"timelimit":"4"
+	},
+	{
+		"question":"cos<sup>2</sup>A＝ ?",
+		"answer":"1－sin<sup>2</sup>A",
+		"opt1":"1＋sin<sup>2</sup>A",
+		"opt2":"sin<sup>2</sup>A－1",
+		"opt3":"－sin<sup>2</sup>A－1",
+		"timelimit":"4"
+	},
+	{
+		"question":"<frac><fn>1</fn><fd>cos<sup>2</sup>A</fd></frac>＝ ?",
+		"answer":"1＋tan<sup>2</sup>A",
+		"opt1":"1－tan<sup>2</sup>A",
+		"opt2":"tan<sup>2</sup>A－1",
+		"opt3":"－tan<sup>2</sup>A－1",
+		"timelimit":"4"
+	},
+	{
+		"question":"tan<sup>2</sup>A＝ ?",
+		"answer":"<frac><fn>1</fn><fd>cos<sup>2</sup>A</fd></frac>－1",
+		"opt1":"1＋<frac><fn>1</fn><fd>cos<sup>2</sup>A</fd></frac>",
+		"opt2":"1－<frac><fn>1</fn><fd>cos<sup>2</sup>A</fd></frac>",
+		"opt3":"－<frac><fn>1</fn><fd>cos<sup>2</sup>A</fd></frac>－1",
+		"timelimit":"4"
+	},
+	{
+		"question":"sin(－A)＝ ?",
+		"answer":"－sinA",
+		"opt1":"sinA",
+		"opt2":"cosA",
+		"opt3":"－cosA",
+		"timelimit":"4"
+	},
+	{
+		"question":"cos(－A)＝ ?",
+		"answer":"cosA",
+		"opt1":"sinA",
+		"opt2":"－sinA",
+		"opt3":"－cosA",
+		"timelimit":"4"
+	},
+	{
+		"question":"tan(－A)＝ ?",
+		"answer":"－tanA",
+		"opt1":"tanA",
+		"opt2":"<frac><fn>1</fn><fd>tanA</fd></frac>",
+		"opt3":"－<frac><fn>1</fn><fd>tanA</fd></frac>",
+		"timelimit":"4"
+	},
+	{
+		"question":"sin(180°－A)＝ ?",
+		"answer":"sinA",
+		"opt1":"cosA",
+		"opt2":"－sinA",
+		"opt3":"－cosA",
+		"timelimit":"4"
+	},
+	{
+		"question":"cos(180°－A)＝ ?",
+		"answer":"－cosA",
+		"opt1":"sinA",
+		"opt2":"cosA",
+		"opt3":"－sinA",
+		"timelimit":"4"
+	},
+	{
+		"question":"tan(180°－A)＝ ?",
+		"answer":"－tanA",
+		"opt1":"tanA",
+		"opt2":"<frac><fn>1</fn><fd>tanA</fd></frac>",
+		"opt3":"－<frac><fn>1</fn><fd>tanA</fd></frac>",
+		"timelimit":"4"
+	},
+	{
+		"question":"sin(90°－A)＝ ?",
+		"answer":"cosA",
+		"opt1":"sinA",
+		"opt2":"－sinA",
+		"opt3":"－cosA",
+		"timelimit":"4"
+	},
+	{
+		"question":"cos(90°－A)＝ ?",
+		"answer":"sinA",
+		"opt1":"cosA",
+		"opt2":"－sinA",
+		"opt3":"－cosA",
+		"timelimit":"4"
+	},
+	{
+		"question":"tan(90°－A)＝ ?",
+		"answer":"<frac><fn>1</fn><fd>tanA</fd></frac>",
+		"opt1":"tanA",
+		"opt2":"－tanA",
+		"opt3":"－<frac><fn>1</fn><fd>tanA</fd></frac>",
+		"timelimit":"4"
+	},
+	{
+		"question":"sin(90°＋A)＝ ?",
+		"answer":"cosA",
+		"opt1":"sinA",
+		"opt2":"－sinA",
+		"opt3":"－cosA",
+		"timelimit":"4"
+	},
+	{
+		"question":"cos(90°＋A)＝ ?",
+		"answer":"－sinA",
+		"opt1":"sinA",
+		"opt2":"cosA",
+		"opt3":"－cosA",
+		"timelimit":"4"
+	},
+	{
+		"question":"tan(90°＋A)＝ ?",
+		"answer":"－<frac><fn>1</fn><fd>tanA</fd></frac>",
+		"opt1":"tanA",
+		"opt2":"<frac><fn>1</fn><fd>tanA</fd></frac>",
+		"opt3":"－tanA",
+		"timelimit":"4"
+	},
+	{
+		"question":"sin(180°＋A)＝ ?",
+		"answer":"－sinA",
+		"opt1":"sinA",
+		"opt2":"cosA",
+		"opt3":"－cosA",
+		"timelimit":"4"
+	},
+	{
+		"question":"cos(180°＋A)＝ ?",
+		"answer":"－cosA",
+		"opt1":"sinA",
+		"opt2":"cosA",
+		"opt3":"－sinA",
+		"timelimit":"4"
+	},
+	{
+		"question":"tan(180°＋A)＝ ?",
+		"answer":"tanA",
+		"opt1":"<frac><fn>1</fn><fd>tanA</fd></frac>",
+		"opt2":"－tanA",
+		"opt3":"－<frac><fn>1</fn><fd>tanA</fd></frac>",
+		"timelimit":"4"
+	},
+	{
+		"question":"sinAcosB＋cosAsinB＝ ?",
+		"answer":"sin(A＋B)",
+		"opt1":"sin(A－B)",
+		"opt2":"cos(A＋B)",
+		"opt3":"cos(A－B)",
+		"timelimit":"5"
+	},
+	{
+		"question":"sinAcosB－cosAsinB＝ ?",
+		"answer":"sin(A－B)",
+		"opt1":"sin(A＋B)",
+		"opt2":"cos(A＋B)",
+		"opt3":"cos(A－B)",
+		"timelimit":"5"
+	},
+	{
+		"question":"cosAcosB－sinAsinB＝ ?",
+		"answer":"cos(A＋B)",
+		"opt1":"sin(A＋B)",
+		"opt2":"sin(A－B)",
+		"opt3":"cos(A－B)",
+		"timelimit":"5"
+	},
+	{
+		"question":"cosAcosB＋sinAsinB＝ ?",
+		"answer":"cos(A－B)",
+		"opt1":"sin(A＋B)",
+		"opt2":"sin(A－B)",
+		"opt3":"cos(A＋B)",
+		"timelimit":"5"
+	},
+	{
+		"question":"sin(A＋B)＝ ?",
+		"answer":"sinAcosB＋cosAsinB",
+		"opt1":"sinAcosB－cosAsinB",
+		"opt2":"cosAcosB＋sinAsinB",
+		"opt3":"cosAcosB－sinAsinB",
+		"timelimit":"5"
+	},
+	{
+		"question":"sin(A－B)＝ ?",
+		"answer":"sinAcosB－cosAsinB",
+		"opt1":"sinAcosB＋cosAsinB",
+		"opt2":"cosAcosB＋sinAsinB",
+		"opt3":"cosAcosB－sinAsinB",
+		"timelimit":"5"
+	},
+	{
+		"question":"cos(A－B)＝ ?",
+		"answer":"cosAcosB＋sinAsinB",
+		"opt1":"sinAcosB＋cosAsinB",
+		"opt2":"sinAcosB－cosAsinB",
+		"opt3":"cosAcosB－sinAsinB",
+		"timelimit":"5"
+	},
+	{
+		"question":"cos(A＋B)＝ ?",
+		"answer":"cosAcosB－sinAsinB",
+		"opt1":"sinAcosB＋cosAsinB",
+		"opt2":"sinAcosB－cosAsinB",
+		"opt3":"cosAcosB＋sinAsinB",
+		"timelimit":"5"
+	},
+	{
+		"question":"tan(A＋B)＝ ?",
+		"answer":"<frac><fn>tanA＋tanB</fn><fd>1－tanAtanB</fd></frac>",
+		"opt1":"<frac><fn>1＋tanAtanB</fn><fd>tanA－tanB</fd></frac>",
+		"opt2":"<frac><fn>1－tanAtanB</fn><fd>tanA＋tanB</fd></frac>",
+		"opt3":"<frac><fn>tanA－tanB</fn><fd>1＋tanAtanB</fd></frac>",
+		"timelimit":"5"
+	},
+	{
+		"question":"cos2A＝ ?",
+		"answer":"cos<sup>2</sup>A－sin<sup>2</sup>A",
+		"opt1":"sin<sup>2</sup>A＋cos<sup>2</sup>A",
+		"opt2":"sin<sup>2</sup>A－cos<sup>2</sup>A",
+		"opt3":"cos<sup>2</sup>A－sin<sup>2</sup>A",
+		"timelimit":"5"
+	},
+	{
+		"question":"cos2A＝ ?",
+		"answer":"1－2sin<sup>2</sup>A",
+		"opt1":"2sin<sup>2</sup>A＋1",
+		"opt2":"2sin<sup>2</sup>A－1",
+		"opt3":"1－2sin<sup>2</sup>A",
+		"timelimit":"5"
+	},
+	{
+		"question":"cos2A＝ ?",
+		"answer":"2cos<sup>2</sup>－1",
+		"opt1":"2cos<sup>2</sup>＋1",
+		"opt2":"1－2cos<sup>2</sup>",
+		"opt3":"1－2cos<sup>2</sup>",
+		"timelimit":"5"
+	},
+	{
+		"question":"tan2A＝ ?",
+		"answer":"<frac><fn>2tanA</fn><fd>1－tan<sup>2</sup>A</fd></frac>",
+		"opt1":"<frac><fn>2tanA</fn><fd>1＋tan<sup>2</sup>A</fd></frac>",
+		"opt2":"<frac><fn>1＋tan<sup>2</sup>A</fn><fd>2tanA</fd></frac>",
+		"opt3":"<frac><fn>1－tan<sup>2</sup>A</fn><fd>2tanA</fd></frac>",
+		"timelimit":"5"
+	},
+	{
+		"question":"sin3A＝ ?",
+		"answer":"3sinA－4sin<sup>3</sup>A",
+		"opt1":"4sin<sup>3</sup>A＋3sinA",
+		"opt2":"3sinA＋4sin<sup>3</sup>A",
+		"opt3":"4sin<sup>3</sup>A－3sinA",
+		"timelimit":"5"
+	},
+	{
+		"question":"cos3A＝ ?",
+		"answer":"4cos<sup>3</sup>A－3cosA",
+		"opt1":"4cos<sup>3</sup>A＋3cosA",
+		"opt2":"3cosA＋4cos<sup>3</sup>A",
+		"opt3":"3cosA－4cos<sup>3</sup>A",
+		"timelimit":"5"
+	}
+]
