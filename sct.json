@@ -332,7 +332,7 @@
 		"answer":"1－2sin<sup>2</sup>A",
 		"opt1":"2sin<sup>2</sup>A＋1",
 		"opt2":"2sin<sup>2</sup>A－1",
-		"opt3":"1－2sin<sup>2</sup>A",
+		"opt3":"－1－2sin<sup>2</sup>A",
 		"timelimit":"5"
 	},
 	{
@@ -340,7 +340,7 @@
 		"answer":"2cos<sup>2</sup>－1",
 		"opt1":"2cos<sup>2</sup>＋1",
 		"opt2":"1－2cos<sup>2</sup>",
-		"opt3":"1－2cos<sup>2</sup>",
+		"opt3":"－1－2cos<sup>2</sup>",
 		"timelimit":"5"
 	},
 	{
