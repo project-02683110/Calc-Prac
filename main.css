@@ -2,6 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
+@font-face {
+	font-family: 'Century Schoolbook';
+	src: local('CENSCBK.TTF'), /* フォントがローカルにインストールされている場合に有効 */
+	     url('webfont.eot?#iefix') format('embedded-opentype'), /* eof - IE6-IE8 */
+	     url('webfont.woff') format('woff'), /* woff - Modern Browsers */
+	     url('webfont.ttf')  format('truetype'), /* ttf - Safari, Android, iOS */
+	     url('webfont.svg#svgFontName') format('svg'); /* svg - Legacy iOS */
+}
+@font-face {
+	font-family: 'STIX Two Text';
+	src: local('stix-two-text.ttf'), /* フォントがローカルにインストールされている場合に有効 */
+	     url('webfont.eot?#iefix') format('embedded-opentype'), /* eof - IE6-IE8 */
+	     url('webfont.woff') format('woff'), /* woff - Modern Browsers */
+	     url('webfont.ttf')  format('truetype'), /* ttf - Safari, Android, iOS */
+	     url('webfont.svg#svgFontName') format('svg'); /* svg - Legacy iOS */
+}
 * {
     text-align: center;
     font-family: 'Klee One', cursive;
@@ -9,10 +25,6 @@
 button {
     cursor: pointer;
     transition: all 0.4s ease;
-}
-button:hover {
-	color: #fff;
-	background: #666666;
 }
 .key {
     font-size: 20pt;
@@ -56,6 +68,59 @@ button:hover {
     color: whitesmoke;
     background-color: blue;
     border-color: lightblue;
+}
+.tile {
+    /*font-family: 'Century Schoolbook';*/
+    font-family: 'STIX Two Text';
+    font-style: italic;
+    font-weight: bolder;
+    height: 22px;
+    width: 22px;
+    border: none;
+    color: black;
+    background-color: lightgray;
+    border-radius: 4pt;
+    cursor: pointer;
+}
+.numt {
+    font-style: normal;
+    font-weight: normal;
+}
+#del {
+    font-family: 'STIX Two Text';
+    font-weight: bolder;
+    height: 22px;
+    width: 22px;
+    border: none;
+    color: whitesmoke;
+    background-color: red;
+    border-radius: 4pt;
+    cursor: pointer;
+}
+#secret-answer {
+    display: none;
+}
+.math {
+    font-family: 'STIX Two Text';
+    font-style: italic;
+    font-weight: bolder;
+}
+.input-box {
+    height: 20px;
+    border: 1px transparent solid;
+    color: gray;
+    margin: 0 3px;
+    background-color: whitesmoke;
+    font-family: 'STIX Two Text';
+    font-style: italic;
+    font-weight: bolder;
+}
+.attention {
+    border: 1px aqua solid;
+    animation: none;
+}
+.drop {
+    -khtml-user-drag: element;
 }
 hr {
     height: 0;
