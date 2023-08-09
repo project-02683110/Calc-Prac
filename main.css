@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
+/*
 @font-face {
 	font-family: 'Century Schoolbook';
 	src: local('CENSCBK.TTF');
@@ -10,6 +11,7 @@
 	font-family: 'STIX Two Text';
 	src: local('stix-two-text.ttf');
 }
+*/
 * {
     text-align: center;
     font-family: 'Klee One', cursive;
@@ -62,7 +64,8 @@ button {
     border-color: lightblue;
 }
 .tile {
-    font-family: 'STIX Two Text', 'Century Schoolbook', 'Times New Roman';
+    /*font-family: 'STIX Two Text', 'Century Schoolbook', 'Times New Roman';*/
+    font-family: 'Times New Roman';
     font-style: italic;
     font-weight: bolder;
     height: 22px;
@@ -78,7 +81,7 @@ button {
     font-weight: normal;
 }
 #del {
-    font-family: 'STIX Two Text', 'Century Schoolbook', 'Times New Roman';
+    font-family: 'Times New Roman';
     font-weight: bolder;
     height: 22px;
     width: 22px;
@@ -92,7 +95,7 @@ button {
     display: none;
 }
 .math {
-    font-family: 'STIX Two Text', 'Century Schoolbook', 'Times New Roman';
+    font-family: 'Times New Roman';
     font-style: italic;
     font-weight: bolder;
 }
@@ -102,7 +105,7 @@ button {
     color: gray;
     margin: 0 3px;
     background-color: whitesmoke;
-    font-family: 'STIX Two Text';
+    font-family: 'Times New Roman';
     font-style: italic;
     font-weight: bolder;
 }
