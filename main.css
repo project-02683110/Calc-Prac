@@ -4,19 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
 @font-face {
 	font-family: 'Century Schoolbook';
-	src: local('CENSCBK.TTF'), /* フォントがローカルにインストールされている場合に有効 */
-	     url('webfont.eot?#iefix') format('embedded-opentype'), /* eof - IE6-IE8 */
-	     url('webfont.woff') format('woff'), /* woff - Modern Browsers */
-	     url('webfont.ttf')  format('truetype'), /* ttf - Safari, Android, iOS */
-	     url('webfont.svg#svgFontName') format('svg'); /* svg - Legacy iOS */
+	src: local('CENSCBK.TTF');
 }
 @font-face {
 	font-family: 'STIX Two Text';
-	src: local('stix-two-text.ttf'), /* フォントがローカルにインストールされている場合に有効 */
-	     url('webfont.eot?#iefix') format('embedded-opentype'), /* eof - IE6-IE8 */
-	     url('webfont.woff') format('woff'), /* woff - Modern Browsers */
-	     url('webfont.ttf')  format('truetype'), /* ttf - Safari, Android, iOS */
-	     url('webfont.svg#svgFontName') format('svg'); /* svg - Legacy iOS */
+	src: local('stix-two-text.ttf');
 }
 * {
     text-align: center;
