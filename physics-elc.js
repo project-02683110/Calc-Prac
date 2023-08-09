@@ -50,7 +50,13 @@ function toutched(e) {
     console.log(ansData);
     var correct = document.getElementById('secret-answer');
     if (ansData == correct.textContent) {
-        aPlay('T');
+        var effect = document.getElementById('Effect');
+        var score = document.getElementById('score');
+        var S = Number(score.innerText);
+        S++;
+        if (S>999) S=999;
+        score.innerText = ( '000' + S ).slice( -3 );
+        if (effect.value == 'T') aPlay('T');
         document.body.animate({
             background: ["deepskyblue", "white"],
         }, 500 );

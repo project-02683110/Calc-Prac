@@ -70,8 +70,7 @@ button {
     border-color: lightblue;
 }
 .tile {
-    /*font-family: 'Century Schoolbook';*/
-    font-family: 'STIX Two Text';
+    font-family: 'STIX Two Text', 'Century Schoolbook', 'Times New Roman';
     font-style: italic;
     font-weight: bolder;
     height: 22px;
@@ -87,7 +86,7 @@ button {
     font-weight: normal;
 }
 #del {
-    font-family: 'STIX Two Text';
+    font-family: 'STIX Two Text', 'Century Schoolbook', 'Times New Roman';
     font-weight: bolder;
     height: 22px;
     width: 22px;
@@ -101,7 +100,7 @@ button {
     display: none;
 }
 .math {
-    font-family: 'STIX Two Text';
+    font-family: 'STIX Two Text', 'Century Schoolbook', 'Times New Roman';
     font-style: italic;
     font-weight: bolder;
 }
