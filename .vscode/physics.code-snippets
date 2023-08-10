@@ -1,0 +1,42 @@
+{
+	"Math Span": {
+		//"scope": "html",
+		"prefix": "ms",
+		"body": [
+			"$1<span class=\"math\">$2</span>$3"
+		],
+		"description": "分数表記"
+	},
+	"Math Frac": {
+		//"scope": "html",
+		"prefix": "mf",
+		"body": [
+			"$3<frac><fn>$1</fn><fd>$2</fd></frac>$4"
+		],
+		"description": "分数表記"
+	},
+	"Physics Typing Character": {
+	 	//"scope": "html",
+	 	"prefix": "pt",
+	 	"body": [
+	 		"$2<button class=\"tile\">$1</button>$3"
+	 	],
+	 	"description": "物理マーク方式で文字となるもの"
+	},
+	"Physics Inputing Column": {
+		//"scope": "html",
+		"prefix": "pi",
+		"body": [
+			"$1<button class=\"input-box\"></button>$2"
+		],
+		"description": "物理マーク方式で入力欄となるもの"
+   	},
+	"Physics Inputing Frac": {
+		//"scope": "html",
+		"prefix": "pf",
+		"body": [
+			"$1<frac><fn><button class=\"input-box\"></button></fn><fd><button class=\"input-box\"></button></fd></frac>$2"
+		],
+		"description": "物理マーク方式での分数表記"
+	}
+}
