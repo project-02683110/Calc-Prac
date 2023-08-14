@@ -47,17 +47,6 @@
                     size.innerText = 'xx';
             }
         }
-        function getDPI(){
-	        var dpi=0;
-	        var div = document.createElement('div');
-	        div.setAttribute('style', 'height:1in;left:-100%;top:-100%;position:absolute;width:1in;');
-	        document.body.appendChild(div);
-	        dpi = div.offsetHeight;
-	        document.body.removeChild(div);
-	        div = null;
-            console.log(dpi);
-	        return dpi;
-        }
         function diameterChanged() {
             let input0 = document.getElementById('ratio');
             let input1 = document.getElementById('input1');
