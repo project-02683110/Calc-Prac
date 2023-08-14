@@ -43,29 +43,46 @@
                 case 50:
                     size.innerText = 'XL';
                     break;
+                default:
+                    size.innerText = 'xx';
             }
         }
+        function getDPI(){
+	        var dpi=0;
+	        var div = document.createElement('div');
+	        div.setAttribute('style', 'height:1in;left:-100%;top:-100%;position:absolute;width:1in;');
+	        document.body.appendChild(div);
+	        dpi = div.offsetHeight;
+	        document.body.removeChild(div);
+	        div = null;
+            console.log(dpi);
+	        return dpi;
+        }
         function diameterChanged() {
+            let input0 = document.getElementById('ratio');
             let input1 = document.getElementById('input1');
             let input2 = document.getElementById('input2');
             let output = document.getElementById('output');
+            let ratio = input0.value;
             let diameter = input1.value;
             input2.value = Math.round(Math.PI * diameter);
-            output.style.width = diameter + 'mm';
-            output.style.height = diameter + 'mm';
-            output.style.lineHeight = diameter + 'mm';
+            output.style.width = diameter * ratio + 'cm';
+            output.style.height = diameter * ratio + 'cm';
+            output.style.lineHeight = diameter * ratio + 'cm';
             output.innerText = diameter + 'mm';
             changeSize(diameter);
         }
         function circumferenceChanged() {
+            let input0 = document.getElementById('ratio');
             let input1 = document.getElementById('input1');
             let input2 = document.getElementById('input2');
             let output = document.getElementById('output');
             let diameter = Math.round(input2.value / Math.PI);
+            let ratio = input0.value;
             input1.value = diameter;
-            output.style.width = diameter + 'mm';
-            output.style.height = diameter + 'mm';
-            output.style.lineHeight = diameter + 'mm';
+            output.style.width = diameter * ratio + 'cm';
+            output.style.height = diameter * ratio + 'cm';
+            output.style.lineHeight = diameter * ratio + 'cm';
             output.innerText = diameter + 'mm';
             changeSize(diameter);
         }
@@ -79,13 +96,15 @@
 <article>
     <h2>円の直径</h2>
     <span id="size">S</span>サイズ
-    <div style="height: 6cm; display: flex; align-items: center;">
+    <div style="height: 10cm; display: flex; align-items: center;">
         <div class="circle" style="width: 30mm; height: 30mm; line-height: 30mm;" id="output">30mm</div>
     </div>
     <hr>
     <form name="form">
         直径 : <input type="number" id="input1" min="25" max="50" value="30" onchange="diameterChanged()" />mm<br>
         円周 : <input type="number" id="input2" min="79" max="157" value="94" onchange="circumferenceChanged()" />mm<br>
+        3cmを測ってください :<br>
+        <input type="range" id="ratio" min="0" max="0.2" value="0.1" step="0.001" style="width: 6cm;" onchange="circumferenceChanged()" />
     </form>
     <br>
 </article>
