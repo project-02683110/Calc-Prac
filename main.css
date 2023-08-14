@@ -148,6 +148,12 @@ fd {
 sup {
     font-size: 6pt;
 }
+.circle {
+    margin: 1cm auto;
+    text-align: center;
+    border: 2px black solid;
+    border-radius: 50%;
+}
 article {
     padding: 40px, 8px, 24px;
 }
