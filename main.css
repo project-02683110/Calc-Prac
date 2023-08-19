@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@900&display=swap');
 /*
 @font-face {
 	font-family: 'Century Schoolbook';
@@ -15,6 +16,9 @@
 * {
     text-align: center;
     font-family: 'Klee One', cursive;
+}
+b {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 button {
     cursor: pointer;
@@ -80,6 +84,9 @@ button {
     font-style: normal;
     font-weight: normal;
 }
+.tfunc {
+    width: 40px;
+}
 #del {
     font-family: 'Times New Roman';
     font-weight: bolder;
@@ -112,9 +119,6 @@ button {
 .attention {
     border: 1px aqua solid;
     animation: none;
-}
-.drop {
-    -khtml-user-drag: element;
 }
 .nums {
     margin-top: 32px;
