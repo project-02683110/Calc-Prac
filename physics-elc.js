@@ -84,8 +84,8 @@ function toutched(e) {
         var toInput = currentAttention[0];
         var tx = elem.textContent;
         var ad = Number(toInput.id);
-        if (toInput.classList.contains('nopt') && elem.classList.contains('numt')) {
-            if (toInput.getAttribute(Number(tx))) {
+        if (toInput.classList.contains('nopt')) {
+            if (elem.classList.contains('numt') && toInput.getAttribute(Number(tx))) {
                 global[ad].Num = Number(tx);
                 toInput.innerHTML = toInput.getAttribute(Number(tx));
             }
