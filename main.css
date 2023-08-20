@@ -125,6 +125,11 @@ button {
 .wt {
     color: lightcoral;
 }
+.nopt {
+    color: lightseagreen;
+    font-family: 'Times New Roman','Klee One';
+    font-style: normal;
+}
 .input-box-r {
     height: 20px;
     border: 1px lightgray dashed;
