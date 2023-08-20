@@ -85,7 +85,8 @@ button {
     font-weight: normal;
 }
 .tfunc {
-    width: 40px;
+    width: 48px;
+    font-style: normal;
 }
 #del {
     font-family: 'Times New Roman';
@@ -105,6 +106,7 @@ button {
     font-family: 'Times New Roman';
     font-style: italic;
     font-weight: bolder;
+    margin: 0 4px;
 }
 .input-box {
     height: 20px;
@@ -119,6 +121,22 @@ button {
 .attention {
     border: 1px aqua solid;
     animation: none;
+}
+.wt {
+    color: lightcoral;
+}
+.input-box-r {
+    height: 20px;
+    border: 1px lightgray dashed;
+    color: gray;
+    margin: 0 3px;
+    background-color: whitesmoke;
+    font-family: 'Times New Roman';
+    font-style: italic;
+    font-weight: bolder;
+}
+.wt {
+    color: lightcoral;
 }
 .nums {
     margin-top: 32px;
