@@ -53,6 +53,7 @@ function main() {
     }
     for (var i = 1; i <= 7; i++) {
         let WL = 'WL'+i.toString();
+        alert(WL);
         let bt = document.getElementById(WL);
         bt.classList.add('No');
         if (data[rndArray[i]][WL] == 'TRUE') bt.classList.remove('No');
