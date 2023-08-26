@@ -259,7 +259,7 @@ sup {
     border-radius: 3pt;
     cursor: default;
 }
-No {
+.No {
     background-color: lightgray;
 }
 .circle {
