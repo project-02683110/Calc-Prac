@@ -51,12 +51,12 @@ function main() {
         options[i].innerHTML = Tag1 + text + Tag2;
         if (rndArray[i] == a) options[i].classList.add('ans');
     }
-    for (var i = 1; i <= 7; i++) {
-        let WL = 'WL'+i.toString();
+    for (var k = 1; k <= 7; k++) {
+        let WL = 'WL'+k.toString();
         alert(WL);
         let bt = document.getElementById(WL);
         bt.classList.add('No');
-        if (data[rndArray[i]][WL] == 'TRUE') bt.classList.remove('No');
+        if (data[a][WL] == 'TRUE') bt.classList.remove('No');
     }
     window.setTimeout(main, int * 1000);
     A = a;
