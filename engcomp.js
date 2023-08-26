@@ -53,10 +53,9 @@ function main() {
     }
     for (var k = 1; k <= 7; k++) {
         let WL = 'WL'+k.toString();
-        alert(WL);
         let bt = document.getElementById(WL);
         bt.classList.add('No');
-        if (data[a][WL] == 'TRUE') bt.classList.remove('No');
+        if (data[a][WL] == 'False') bt.classList.remove('No');
     }
     window.setTimeout(main, int * 1000);
     A = a;
