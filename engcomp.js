@@ -51,6 +51,12 @@ function main() {
         options[i].innerHTML = Tag1 + text + Tag2;
         if (rndArray[i] == a) options[i].classList.add('ans');
     }
+    for (var i = 1; i <= 7; i++) {
+        let WL = 'A'+i.toString();
+        let bt = document.getElementById(WL);
+        bt.classList.add('No');
+        if (data[rndArray[i]][WL]) bt.classList.remove('No');
+    }
     window.setTimeout(main, int * 1000);
     A = a;
     taptag = false;

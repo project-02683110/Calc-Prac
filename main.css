@@ -175,6 +175,93 @@ fd {
 sup {
     font-size: 6pt;
 }
+#WL1 {
+    width: 17pt;
+    height: 17pt;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    color: white;
+    background-color: red;
+    border: black 1pt solid;
+    border-radius: 3pt;
+    cursor: default;
+}
+#WL2 {
+    width: 17pt;
+    height: 17pt;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    color: white;
+    background-color: indigo;
+    border: black 1pt solid;
+    border-radius: 3pt;
+    cursor: default;
+}
+#WL3 {
+    width: 17pt;
+    height: 17pt;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    color: white;
+    background-color: blue;
+    border: black 1pt solid;
+    border-radius: 3pt;
+    cursor: default;
+}
+#WL4 {
+    width: 17pt;
+    height: 17pt;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    color: white;
+    background-color: skyblue;
+    border: black 1pt solid;
+    border-radius: 3pt;
+    cursor: default;
+}
+#WL5 {
+    width: 17pt;
+    height: 17pt;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    color: white;
+    background-color: orange;
+    border: black 1pt solid;
+    border-radius: 3pt;
+    cursor: default;
+}
+#WL6 {
+    width: 17pt;
+    height: 17pt;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    color: white;
+    background-color: green;
+    border: black 1pt solid;
+    border-radius: 3pt;
+    cursor: default;
+}
+#WL7 {
+    width: 17pt;
+    height: 17pt;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    color: white;
+    background-color: goldenrod;
+    border: black 1pt solid;
+    border-radius: 3pt;
+    cursor: default;
+}
+No {
+    background-color: lightgray;
+}
 .circle {
     margin: 1cm auto;
     text-align: center;
