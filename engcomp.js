@@ -42,7 +42,7 @@ function main() {
         } while (randomCheck(rndArray));
     }
     a = rndArray[0];
-    Q.innerHTML = data[a].number + '. ' + Tag3 + data[a][Lang[s]] + Tag4;
+    Q.innerHTML = Tag3 + data[a][Lang[s]] + Tag4;
     rndArray = shuffle(rndArray);
     var options = document.getElementsByClassName('key');
     var text;
@@ -55,7 +55,7 @@ function main() {
         let WL = 'WL'+i.toString();
         let bt = document.getElementById(WL);
         if (bt.classList.contains('No') == false) bt.classList.add('No');
-        if (data[a][WL] == 'False') bt.classList.remove('No');
+        if (data[a][WL] == 'True') bt.classList.remove('No');
     }
     window.setTimeout(main, int * 1000);
     A = a;
