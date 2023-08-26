@@ -11,7 +11,7 @@ fetchData();
 
 async function fetchData() {
     try {
-        const jsondata = await fetch('target1900.json');
+        const jsondata = await fetch('engcomp.json');
         data = await jsondata.json();
         main();
     } catch (error) {
