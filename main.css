@@ -187,9 +187,6 @@ sup {
     border-radius: 3pt;
     cursor: default;
 }
-.No {
-    background-color: lightgray;
-}
 #WL2 {
     width: 17pt;
     height: 17pt;
@@ -201,9 +198,6 @@ sup {
     border: black 1pt solid;
     border-radius: 3pt;
     cursor: default;
-}
-.No {
-    background-color: lightgray;
 }
 #WL3 {
     width: 17pt;
@@ -217,9 +211,6 @@ sup {
     border-radius: 3pt;
     cursor: default;
 }
-.No {
-    background-color: lightgray;
-}
 #WL4 {
     width: 17pt;
     height: 17pt;
@@ -231,9 +222,6 @@ sup {
     border: black 1pt solid;
     border-radius: 3pt;
     cursor: default;
-}
-.No {
-    background-color: lightgray;
 }
 #WL5 {
     width: 17pt;
@@ -247,9 +235,6 @@ sup {
     border-radius: 3pt;
     cursor: default;
 }
-.No {
-    background-color: lightgray;
-}
 #WL6 {
     width: 17pt;
     height: 17pt;
@@ -261,9 +246,6 @@ sup {
     border: black 1pt solid;
     border-radius: 3pt;
     cursor: default;
-}
-.No {
-    background-color: lightgray;
 }
 #WL7 {
     width: 17pt;
@@ -278,7 +260,8 @@ sup {
     cursor: default;
 }
 .No {
-    background-color: lightgray !important;
+    background-color: whitesmoke !important;
+    border-color: white !important;
 }
 .circle {
     margin: 1cm auto;
