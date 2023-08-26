@@ -278,7 +278,7 @@ sup {
     cursor: default;
 }
 .No {
-    background-color: lightgray;
+    background-color: lightgray !important;
 }
 .circle {
     margin: 1cm auto;

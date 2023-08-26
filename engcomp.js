@@ -54,7 +54,7 @@ function main() {
     for (var i = 1; i <= 7; i++) {
         let WL = 'WL'+i.toString();
         let bt = document.getElementById(WL);
-        bt.classList.add('No');
+        if (bt.classList.contains('No') == false) bt.classList.add('No');
         if (data[a][WL] == 'False') bt.classList.remove('No');
     }
     window.setTimeout(main, int * 1000);
