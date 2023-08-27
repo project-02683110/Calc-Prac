@@ -1,6 +1,7 @@
 let hist = [];
 let now;
 let data;
+let count = 1;
 
 fetchData();
 
@@ -26,7 +27,7 @@ function Qt() {
     do {
         now = Math.floor(Math.random() * (data.length));
     } while (hist.indexOf(now) != -1);
-    Q.innerHTML = data[now].japanese;
+    Q.innerHTML = count + data[now].japanese;
     A.innerHTML = data[now].english.substr(0,1) + '<y>' + data[now].english.substr(1) + '</y>';
     aPlay("Qt");
     for (var i = 1; i <= 8; i++) {
@@ -35,6 +36,7 @@ function Qt() {
         if (bt.classList.contains('No') == false) bt.classList.add('No');
         if (data[now][WL] == 'True') bt.classList.remove('No');
     }
+    count++;
     window.setTimeout(An, 5000);
     hist.push(now);
     var t = 0;
