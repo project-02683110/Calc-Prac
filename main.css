@@ -281,6 +281,9 @@ sup {
     border: 2px black solid;
     border-radius: 50%;
 }
+a.nolink {
+    color: black;
+}
 article {
     padding: 40px, 8px, 24px;
 }
