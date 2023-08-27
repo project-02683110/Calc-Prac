@@ -28,6 +28,7 @@ function Qt() {
     } while (hist.indexOf(now) != -1);
     Q.innerHTML = data[now].japanese;
     A.innerHTML = data[now].english.substr(0,1) + '<y>' + data[now].english.substr(1) + '</y>';
+    aPlay("Qt");
     for (var i = 1; i <= 8; i++) {
         let WL = 'WL'+i.toString();
         let bt = document.getElementById(WL);
@@ -51,6 +52,7 @@ function An() {
     let A = document.getElementById('A');
     let timelimit = document.getElementById('timelimit');
     A.innerHTML = data[now].english.substr(0,1) + '<z>' + data[now].english.substr(1) + '</z>';
+    aPlay("An");
     window.setTimeout(Qt, 5000);
     var t = 0;
     let timer = setInterval(function() {
