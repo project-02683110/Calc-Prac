@@ -27,7 +27,7 @@ function Qt() {
     do {
         now = Math.floor(Math.random() * (data.length));
     } while (hist.indexOf(now) != -1);
-    Q.innerHTML = count.toString() + '. ' + data[now].japanese;
+    Q.innerHTML = count.toString() + '. ' + trim(data[now].japanese);
     A.innerHTML = data[now].english.substr(0,1) + '<y>' + data[now].english.substr(1) + '</y>';
     aPlay("Qt");
     for (var i = 1; i <= 8; i++) {
@@ -65,6 +65,13 @@ function An() {
             timelimit.value = t;
         }
     }, 50);
+}
+
+function trim(text) {
+    while (text.length > 35) {
+        text = text.substr(0, text.lastIndexOf('。'));
+    }
+    return text;
 }
 
 function aPlay(file) {
