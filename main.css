@@ -67,6 +67,15 @@ button {
     background-color: blue;
     border-color: lightblue;
 }
+.niset {
+    height: 22px;
+    width: 22px;
+    border: none;
+    color: transparent;
+    background-color: lightgray;
+    border-radius: 4pt;
+    cursor: pointer;
+}
 .tile {
     /*font-family: 'STIX Two Text', 'Century Schoolbook', 'Times New Roman';*/
     font-family: 'Times New Roman';
@@ -147,6 +156,28 @@ button {
     margin-top: 32px;
     padding-top: 8px;
     border-top: 1px black dotted;
+}
+.nisei {
+    height: 20px;
+    border: 1px transparent solid;
+    color: gray;
+    margin: 0 3px;
+    background-color: whitesmoke;
+    font-family: 'Times New Roman';
+    font-style: italic;
+    font-weight: bolder;
+}
+.nisea {
+    border: 1px aqua solid;
+    animation: none;
+}
+y {
+    color: transparent;
+    text-decoration: underline 10pt black solid;
+}
+z {
+    color: red;
+    text-decoration: underline 10pt black solid;
 }
 hr {
     height: 0;

@@ -13,13 +13,15 @@
 </header>
 <!-- 文字は <button class="tile"></button> / 穴は <button class="input-box"></button> -->
 <article>
-    <h2>問題</h2>
+    <h2 id="h2">問題</h2>
     <!-- 以下問題文 -->
     <p id="Q">
-
+<!--
+<h3>STEP1 : 1文字の入力</h3><button class="niset"></button>のようになっているボタンをクリックすることで入力できます<br><button class="tile">c</button><blockquote>Example : <span class="math">ab<button class="input-box"></button>de</span></blockquote><hr><h3>STEP2 : 入力欄の切り替え</h3><button class="nisei">?</button>をクリックすることで入力先を切り替えできます(<button class="nisei nisea">?</button>のようになる)<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile">c</button><blockquote>Example : <span class="math">ab<button class="input-box"></button>de</span></blockquote><hr><h3>STEP3 : 2文字以上の入力</h3>ボタンを続けて押すことで数式を入力できます(順序は問いません)<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile numt">2</button>→<button class="tile">π</button>→<button class="tile">r</button><blockquote>Example : 円周の公式 <span class="math">l=<button class="input-box"></button></span></blockquote><hr><h3>STEP4 : 累乗の入力</h3>同じボタンを複数回入力することで累乗にできます<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile">π</button>→<button class="tile">r</button>×2<blockquote>Example : 円の面積の公式 <span class="math">S=<button class="input-box"></button></span></blockquote><hr><h3>STEP5 : 選択肢の入力</h3>数字ボタンを押すことで選択肢を入力できます<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile numt">2</button><blockquote>Example : ゼータは? <button class="input-box nopt" 1="ε" 2="ζ"></button></blockquote>
+-->
     </p>
     <!-- 問題文終わり -->
-    <blockquote class="nums"><button class="tile numt">1</button>, <button class="tile numt">2</button>, <button class="tile numt">3</button>, <button class="tile numt">4</button>, <button class="tile numt">5</button>, <button class="tile numt">6</button>, <button class="tile numt">7</button>, <button class="tile numt">8</button>, <button class="tile numt">9</button>; <button id="del" onclick="del()">Del</button></blockquote>
+    <blockquote class="nums"><button class="tile numt">1</button>, <button class="tile numt">2</button>, <button class="tile numt">3</button>, <button class="tile numt">4</button>, <button class="tile numt">5</button>, <button class="tile numt">6</button>, <button class="tile numt">7</button>, <button class="tile numt">8</button>, <button class="tile numt">9</button>; <button id="del" onclick="del()">Del</button><br><small>Delで削除</small></blockquote>
     <br>
     <h3>スコア：<span id="score">000</span>点</h3>
     <hr>
