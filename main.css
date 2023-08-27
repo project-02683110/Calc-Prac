@@ -175,13 +175,13 @@ y {
     color: transparent;
     text-decoration: underline 10pt black solid;
     text-decoration-skip-ink: none;
-    text-underline-offset: 4px;
+    text-underline-offset: 12px;
 }
 z {
     color: red;
     text-decoration: underline 10pt black solid;
     text-decoration-skip-ink: none;
-    text-underline-offset: 4px;
+    text-underline-offset: 12px;
 }
 hr {
     height: 0;
