@@ -259,6 +259,18 @@ sup {
     border-radius: 3pt;
     cursor: default;
 }
+#WL8 {
+    width: 17pt;
+    height: 17pt;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    color: white;
+    background-color: plum;
+    border: black 1pt solid;
+    border-radius: 3pt;
+    cursor: default;
+}
 .No {
     background-color: whitesmoke !important;
     border-color: white !important;

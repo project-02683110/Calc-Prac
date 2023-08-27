@@ -11,7 +11,7 @@ fetchData();
 
 async function fetchData() {
     try {
-        const jsondata = await fetch('engcomp.json');
+        const jsondata = await fetch('newl.json');
         data = await jsondata.json();
         main();
     } catch (error) {
@@ -51,7 +51,7 @@ function main() {
         options[i].innerHTML = Tag1 + text + Tag2;
         if (rndArray[i] == a) options[i].classList.add('ans');
     }
-    for (var i = 1; i <= 7; i++) {
+    for (var i = 1; i <= 8; i++) {
         let WL = 'WL'+i.toString();
         let bt = document.getElementById(WL);
         if (bt.classList.contains('No') == false) bt.classList.add('No');
