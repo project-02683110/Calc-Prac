@@ -55,6 +55,7 @@ function An() {
     let timelimit = document.getElementById('timelimit');
     A.innerHTML = data[now].english.substr(0,1) + '<z>' + data[now].english.substr(1) + '</z>';
     aPlay("An");
+    speakE(data[now].english);
     window.setTimeout(Qt, 5000);
     var t = 0;
     let timer = setInterval(function() {
@@ -77,4 +78,19 @@ function trim(text) {
 function aPlay(file) {
     document.getElementById(file).currentTime = 0;
     document.getElementById(file).play();
+}
+
+function speakE(text) {
+    if ('speechSynthesis' in window) {
+        const uttr = new SpeechSynthesisUtterance()
+        uttr.text = text
+        uttr.lang = 'en-US'
+        const voices = speechSynthesis.getVoices()
+        for (let i = 0; i < voices.length; i++) {
+          if (voices[i].lang === 'en-US') {
+            uttr.voice = voices[i]
+          }
+        }
+        window.speechSynthesis.speak(uttr)
+     }
 }
