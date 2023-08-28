@@ -114,11 +114,10 @@ function speakE(text) {
 
 function speakJ(text) {
     const uttr = new SpeechSynthesisUtterance();
-    uttr.text = text;
+    uttr.text = text.replace(/\(.*\)/g, "");
     uttr.lang = 'en-US';
     uttr.voice = voiceJ;
-    uttr.rate = 1.7
+    uttr.rate = 1.8
     uttr.pitch = 0.5
-    uttr.volume = 2
     window.speechSynthesis.speak(uttr);
 }
