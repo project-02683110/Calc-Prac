@@ -4,9 +4,9 @@ let data;
 let count = 1;
 
 fetchData();
-speakE('Start');
 
 async function fetchData() {
+    speakE('Start');
     try {
         const jsondata = await fetch('newl.json');
         data = await jsondata.json();
