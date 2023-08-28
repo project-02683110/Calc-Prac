@@ -49,9 +49,11 @@ function Qt() {
     do {
         now = Math.floor(Math.random() * (data.length));
     } while (hist.indexOf(now) != -1);
-    Q.innerHTML = count.toString() + '. ' + trim(data[now].japanese);
+    let tx = trim(data[now].japanese);
+    Q.innerHTML = count.toString() + '. ' + trim(tx);
     A.innerHTML = data[now].english.substr(0,1) + '<y>' + data[now].english.substr(1) + '</y>';
     aPlay("Qt");
+    speakJ(tx)
     for (var i = 1; i <= 8; i++) {
         let WL = 'WL'+i.toString();
         let bt = document.getElementById(WL);
