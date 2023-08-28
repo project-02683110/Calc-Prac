@@ -82,16 +82,17 @@ function aPlay(file) {
 
 function speakE(text) {
     if ('speechSynthesis' in window) {
-        const uttr = new SpeechSynthesisUtterance()
-        uttr.text = text
-        uttr.lang = 'en-US'
-        const voices = speechSynthesis.getVoices()
+        let voice;
+        const uttr = new SpeechSynthesisUtterance();
+        uttr.text = text;
+        uttr.lang = 'en-US';
+        const voices = speechSynthesis.getVoices();
         console.log(voices);
         for (let i = 0; i < voices.length; i++) {
-          if (voices[i].lang === 'en-US') {
-            uttr.voice = voices[i]
-          }
+            if (voices[i].name == 'Microsoft David - English (United States)') voice = voices[i];
+            if (voices[i].lang == 'en-US' && voice == undefined) voice = voices[i];
         }
-        window.speechSynthesis.speak(uttr)
+        if (voice) uttr.voice
+        window.speechSynthesis.speak(uttr);
      }
 }
