@@ -2,11 +2,25 @@ let hist = [];
 let now;
 let data;
 let count = 1;
+let voice;
 
 fetchData();
 
+speechSynthesis.addEventListener('voiceschanged', e => {
+    let voices = speechSynthesis.getVoices();
+    let t = true;
+    for (let i = 0; i < voices.length; i++) {
+        if (voices[i].name == 'Microsoft David - English (United States)') {
+            voice = voices[i];
+            t = false;
+        }
+        if (voices[i].lang == 'en-US' && t) voice = voices[i];
+    }
+    let stb = document.getElementById('start');
+    stb.disabled = false;
+});
+
 async function fetchData() {
-    speakE('Start');
     try {
         const jsondata = await fetch('newl.json');
         data = await jsondata.json();
@@ -82,20 +96,9 @@ function aPlay(file) {
 }
 
 function speakE(text) {
-    if ('speechSynthesis' in window) {
-        let voice = true;
-        const uttr = new SpeechSynthesisUtterance();
-        uttr.text = text;
-        uttr.lang = 'en-US';
-        const voices = speechSynthesis.getVoices();
-        console.log(voices);
-        for (let i = 0; i < voices.length; i++) {
-            if (voices[i].name == 'Microsoft David - English (United States)') {
-                uttr.voice = voices[i];
-                voice = false;
-            }
-            if (voices[i].lang == 'en-US' && voice) uttr.voice = voices[i];
-        }
-        window.speechSynthesis.speak(uttr);
-     }
+    const uttr = new SpeechSynthesisUtterance();
+    uttr.text = text;
+    uttr.lang = 'en-US';
+    uttr.voice = voice;
+    window.speechSynthesis.speak(uttr);
 }
