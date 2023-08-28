@@ -2,19 +2,26 @@ let hist = [];
 let now;
 let data;
 let count = 1;
-let voice;
+let voiceE;
 
 fetchData();
 
 speechSynthesis.addEventListener('voiceschanged', e => {
     let voices = speechSynthesis.getVoices();
+    console.log(voices);
     let t = true;
+    let y = true;
     for (let i = 0; i < voices.length; i++) {
         if (voices[i].name == 'Microsoft David - English (United States)') {
-            voice = voices[i];
+            voiceE = voices[i];
             t = false;
         }
-        if (voices[i].lang == 'en-US' && t) voice = voices[i];
+        if (voices[i].name == 'Microsoft Ichiro - Japanese (Japan)') {
+            voiceJ = voices[i];
+            y = false;
+        }
+        if (voices[i].lang == 'en-US' && t) voiceE = voices[i];
+        if (voices[i].lang == 'ja-JP' && y) voiceJ = voices[i];
     }
     let stb = document.getElementById('start');
     stb.disabled = false;
@@ -99,6 +106,14 @@ function speakE(text) {
     const uttr = new SpeechSynthesisUtterance();
     uttr.text = text;
     uttr.lang = 'en-US';
-    uttr.voice = voice;
+    uttr.voice = voiceE;
+    window.speechSynthesis.speak(uttr);
+}
+
+function speakJ(text) {
+    const uttr = new SpeechSynthesisUtterance();
+    uttr.text = text;
+    uttr.lang = 'en-US';
+    uttr.voice = voiceJ;
     window.speechSynthesis.speak(uttr);
 }
