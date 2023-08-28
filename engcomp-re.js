@@ -117,5 +117,8 @@ function speakJ(text) {
     uttr.text = text;
     uttr.lang = 'en-US';
     uttr.voice = voiceJ;
+    uttr.rate = 1.4
+    uttr.pitch = 0.8
+    uttr.volume = 2
     window.speechSynthesis.speak(uttr);
 }
