@@ -4,8 +4,6 @@ let data;
 let count = 1;
 
 fetchData();
-const testV = speechSynthesis.getVoices();
-speakE('Start');
 speakE('Start');
 
 async function fetchData() {
