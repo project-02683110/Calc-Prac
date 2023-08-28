@@ -86,10 +86,10 @@ function speakE(text) {
         uttr.text = text
         uttr.lang = 'en-US'
         const voices = speechSynthesis.getVoices()
+        console.log(voices);
         for (let i = 0; i < voices.length; i++) {
           if (voices[i].lang === 'en-US') {
             uttr.voice = voices[i]
-            alert();
           }
         }
         window.speechSynthesis.speak(uttr)
