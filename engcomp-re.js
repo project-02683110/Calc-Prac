@@ -89,6 +89,7 @@ function speakE(text) {
         for (let i = 0; i < voices.length; i++) {
           if (voices[i].lang === 'en-US') {
             uttr.voice = voices[i]
+            alert();
           }
         }
         window.speechSynthesis.speak(uttr)
