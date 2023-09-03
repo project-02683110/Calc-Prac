@@ -142,7 +142,9 @@ function randomCheck(array) {
 
 function trim(text) {
     while (text.length > 25) {
-        text = text.substr(0, text.lastIndexOf('。'));
+        var texta = text.substr(0, text.lastIndexOf('。'));
+        var textb = text.substr(0, text.lastIndexOf('、'));
+        text = texta < textb ? texta : textb;
     }
     return text;
 }
