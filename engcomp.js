@@ -42,17 +42,17 @@ function main() {
         } while (randomCheck(rndArray));
     }
     a = rndArray[0];
-    Q.innerHTML = Tag3 + data[a][Lang[s]] + Tag4;
+    Q.innerHTML = Tag3 + trim(data[a][Lang[s]]) + Tag4;
     rndArray = shuffle(rndArray);
     var options = document.getElementsByClassName('key');
     var text;
     for (var i = 0; i < options.length; i++) {
-        text = data[rndArray[i]][Lang[Math.abs(s-1)]];
+        text = trim(data[rndArray[i]][Lang[Math.abs(s-1)]]);
         options[i].innerHTML = Tag1 + text + Tag2;
         if (rndArray[i] == a) options[i].classList.add('ans');
     }
     for (var i = 1; i <= 8; i++) {
-        let WL = 'WL'+i.toString();
+        let WL = 'WL' + i.toString();
         let bt = document.getElementById(WL);
         if (bt.classList.contains('No') == false) bt.classList.add('No');
         if (data[a][WL] == 'True') bt.classList.remove('No');
@@ -137,4 +137,12 @@ function randomCheck(array) {
         }
     }
     return false;
+}
+
+
+function trim(text) {
+    while (text.length > 25) {
+        text = text.substr(0, text.lastIndexOf('。'));
+    }
+    return text;
 }
