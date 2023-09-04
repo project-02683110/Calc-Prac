@@ -141,7 +141,7 @@ function randomCheck(array) {
 
 
 function trim(text) {
-    let log = [];
+    let log = [text];
     while (text.length > 25) {
         var texta = text.substr(0, text.lastIndexOf('。'));
         var textb = text.substr(0, text.lastIndexOf('、'));
