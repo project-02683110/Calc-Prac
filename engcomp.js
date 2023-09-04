@@ -5,7 +5,7 @@ function rnd(min, max) {
 var taptag;
 var A;
 var Tag1 = '<span style="font-size: 10px;">', Tag2 = '</span>', Tag3 = '', Tag4 = '';
-var maxLength = 25;
+var maxLength = 23;
 const Lang = ['english', 'japanese'];
 let data;
 fetchData();
