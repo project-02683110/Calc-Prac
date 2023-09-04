@@ -49,6 +49,7 @@ function main() {
     for (var i = 0; i < options.length; i++) {
         text = trim(data[rndArray[i]][Lang[Math.abs(s-1)]]);
         options[i].innerHTML = Tag1 + text + Tag2;
+        console.log(text);
         if (rndArray[i] == a) options[i].classList.add('ans');
     }
     for (var i = 1; i <= 8; i++) {
