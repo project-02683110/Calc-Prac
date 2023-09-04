@@ -5,6 +5,7 @@ function rnd(min, max) {
 var taptag;
 var A;
 var Tag1 = '<span style="font-size: 10px;">', Tag2 = '</span>', Tag3 = '', Tag4 = '';
+var maxLength = 25;
 const Lang = ['english', 'japanese'];
 let data;
 fetchData();
@@ -142,7 +143,7 @@ function randomCheck(array) {
 
 
 function trim(text) {
-    while (text.length > 25) {
+    while (text.length > maxLength) {
         var texta = text.substr(0, text.lastIndexOf('。'));
         var textb = text.substr(0, text.lastIndexOf('、'));
         if (texta.length > 0 && textb.length > 0)  {
