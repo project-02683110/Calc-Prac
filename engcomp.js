@@ -141,11 +141,13 @@ function randomCheck(array) {
 
 
 function trim(text) {
-    console.log(text);
+    let log = [];
     while (text.length > 25) {
         var texta = text.substr(0, text.lastIndexOf('。'));
         var textb = text.substr(0, text.lastIndexOf('、'));
         text = texta < textb ? texta : textb;
+        log.push(text);
     }
+    if (text == '') console.error(log);
     return text;
 }
