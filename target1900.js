@@ -35,13 +35,14 @@ function main() {
     var Style = document.getElementById('Style');
     var stls = Style.selectedIndex;
     var Dataset = document.getElementById('dataset');
-    var dts = Dataset.selectedIndex;
-    var dtsFirst, dtsLength;
     var s = Number(Style.options[stls].value);
+    var dts = Dataset.selectedIndex;
+    var dtsnum = Number(Style.options[dts].value);
+    var dtsFirst, dtsLength;
     var rndArray = [-1, -2, -3, -4];
 
     // Dataset
-    switch (dts) {
+    switch (dtsnum) {
         case 0:
             dtsFirst = 0;
             dtsLength = data.length;
