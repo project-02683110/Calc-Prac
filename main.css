@@ -319,6 +319,11 @@ sup {
 a.nolink {
     color: black;
 }
+.ex {
+    padding: 20px;
+    background-color: aliceblue;
+    border: dashed 1px aquamarine;
+}
 article {
     padding: 40px, 8px, 24px;
 }

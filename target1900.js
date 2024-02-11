@@ -34,14 +34,42 @@ function main() {
     var timelimit = document.getElementById('timelimit');
     var Style = document.getElementById('Style');
     var stls = Style.selectedIndex;
+    var Dataset = document.getElementById('dataset');
+    var dts = Dataset.selectedIndex;
+    var dtsFirst, dtsLength;
     var s = Number(Style.options[stls].value);
     var rndArray = [-1, -2, -3, -4];
-    for (var i = 0 ; i < rndArray.length ; i++) {
+
+    // Dataset
+    switch (dts) {
+        case 0:
+            dtsFirst = 0;
+            dtsLength = data.length;
+            break;
+        case -1:
+            dtsFirst = 0;
+            dtsLength = 800;
+            break;
+        case -2:
+            dtsFirst = 800;
+            dtsLength = 700;
+            break;
+        case -3:
+            dtsFirst = 1500;
+            dtsLength = 400;
+            break;
+        default:
+            dtsFirst = (dts - 1) * 100;
+            dtsLength = 100;
+    }
+
+    a = Math.floor(Math.random() * (dtsLength)) + dtsFirst;
+    rndArray[0] = a;
+    for (var i = 1 ; i < rndArray.length ; i++) {
         do {
             rndArray[i] = Math.floor(Math.random() * (data.length));
         } while (randomCheck(rndArray));
     }
-    a = rndArray[0];
     Q.innerHTML = data[a].number + '. ' + Tag3 + data[a][Lang[s]] + Tag4;
     rndArray = shuffle(rndArray);
     var options = document.getElementsByClassName('key');
