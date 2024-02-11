@@ -34,10 +34,10 @@ function main() {
     var timelimit = document.getElementById('timelimit');
     var Style = document.getElementById('Style');
     var stls = Style.selectedIndex;
-    var Dataset = document.getElementById('dataset');
     var s = Number(Style.options[stls].value);
+    var Dataset = document.getElementById('dataset');
     var dts = Dataset.selectedIndex;
-    var dtsnum = Number(Style.options[dts].value);
+    var dtsnum = Number(Dataset.options[dts].value);
     var dtsFirst, dtsLength;
     var rndArray = [-1, -2, -3, -4];
 
@@ -60,9 +60,10 @@ function main() {
             dtsLength = 400;
             break;
         default:
-            dtsFirst = (dts - 1) * 100;
+            dtsFirst = (dtsnum - 1) * 100;
             dtsLength = 100;
     }
+    console.log(Number(Dataset.options[dts].value));
 
     a = Math.floor(Math.random() * (dtsLength)) + dtsFirst;
     rndArray[0] = a;

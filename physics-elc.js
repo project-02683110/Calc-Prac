@@ -1,6 +1,5 @@
 // After you completed writing, raise this flag.
 let Completed = true;
-let Helpme = false
 
 // Your questions here.
 let QuestionsData = [
@@ -39,12 +38,10 @@ window.onload = function() {
 function reset() {
     let Q = document.getElementById('Q');
     let resetButton = document.getElementById('reset-button');
+    let helpButton = document.getElementById('help-button');
     if (Completed) {
-        if (Helpme) {
-            Q.innerHTML = '<h3>STEP1 : 1文字の入力</h3><button class="niset"></button>のようになっているボタンをクリックすることで入力できます</h3><br>(画面最下部の<button id="del" onclick="del()">Del</button>で選択中の入力欄を削除できます)<br><button class="tile">c</button><blockquote class="ex">Example : <span class="math">ab<button class="input-box"></button>de</span></blockquote><hr><h3>STEP2 : 入力欄の切り替え</h3><button class="nisei">?</button>をクリックすることで入力先を切り替えできます(<button class="nisei nisea">?</button>のようになる)<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile">c</button><blockquote class="ex">Example : <span class="math">ab<button class="input-box"></button>de</span></blockquote><hr><h3>STEP3 : 2文字以上の入力</h3>ボタンを続けて押すことで数式を入力できます(順序は問いません)<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile numt">2</button>→<button class="tile">π</button>→<button class="tile">r</button><blockquote class="ex">Example : 円周の公式 <span class="math">l=<button class="input-box"></button></span></blockquote><hr><h3>STEP4 : 累乗の入力</h3>同じボタンを複数回入力することで累乗にできます<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile">π</button>→<button class="tile">r</button>×2<blockquote class="ex">Example : 円の面積の公式 <span class="math">S=<button class="input-box"></button></span></blockquote><hr><h3>STEP5 : 選択肢の入力</h3>数字ボタンを押すことで選択肢を入力できます<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile numt">2</button><blockquote class="ex">Example : ゼータは? <button class="input-box nopt" 1="ε" 2="ζ"></button></blockquote>'
-            history = [...Array(QuestionsData.length)].map((_, i) => i);
-            charge = true;
-            Helpme = false;
+        if (helpButton.disabled) {
+            Q.innerHTML = '<h3>STEP1 : 1文字の入力</h3><button class="niset"></button>のようになっているボタンをクリックすることで入力できます</h3><br>(画面最下部の<button id="del" onclick="del()">Del</button>で選択中の入力欄を削除できます)<br><button class="tile">c</button><blockquote class="ex">Example : <span class="math">ab<button class="input-box"></button>de</span></blockquote><hr><h3>STEP2 : 入力欄の切り替え</h3><button class="nisei">?</button>をクリックすることで入力先を切り替えできます(<button class="nisei nisea">?</button>のようになる)<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile">c</button><blockquote class="ex">Example : <span class="math">ab<button class="input-box"></button>de</span></blockquote><hr><h3>STEP3 : 2文字以上の入力</h3>ボタンを続けて押すことで数式を入力できます(順序は問いません)<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile numt">2</button>→<button class="tile">π</button>→<button class="tile">r</button><blockquote class="ex">Example : 円周の公式 <span class="math">l=<button class="input-box"></button></span></blockquote><hr><h3>STEP4 : 累乗の入力</h3>同じボタンを複数回入力することで累乗にできます<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile">π</button>→<button class="tile">r</button>×2<blockquote class="ex">Example : 円の面積の公式 <span class="math">S=<button class="input-box"></button></span></blockquote><hr><h3>STEP5 : 選択肢の入力</h3>数字ボタンを押すことで選択肢を入力できます<br><button class="nisei">?</button>→<button class="nisei nisea">?</button>→<button class="tile numt">1</button><blockquote class="ex">Example : チュートリアルを終えますか？ <button class="input-box nopt" 1="はい" 2="いいえ"></button></blockquote><div id="secret-answer">0:Num:1,c:1;1:Num:1,c:1;2:Num:2,r:1,π:1;3:Num:1,r:2,π:1;4:Num:1</div>'
         } else {
             if (history.length == 0) {
                 Q.innerHTML = '<h2>問題を一周しました</h2><br><button class="tile">R</button>をタップしてリスタート。<br><button class="input-box"></button><div id="secret-answer">0:Num:1,R:1</div>'
@@ -112,9 +109,11 @@ function toutched(e) {
     var ansData = ArrayToData(global);
     console.log(ansData);
     var correct = getAnswer();
+    let helpButton = document.getElementById('help-button');
     if (ansData == correct) {
-        if (charge) {
+        if (charge || helpButton.disabled) {
             charge = false;
+            helpButton.disabled = false;
         } else {
             var effect = document.getElementById('Effect');
             var score = document.getElementById('score');
@@ -224,8 +223,11 @@ function optionsShow(elem) {
 }
 
 function showHelpme() {
-    Helpme = true;
-    reset();
+    if (confirm("問題をスキップしたことになりますがよろしいですか？")) {
+        let helpButton = document.getElementById('help-button');
+        helpButton.disabled = true;
+        reset();
+    }
 }
 
 function aPlay(file) {
