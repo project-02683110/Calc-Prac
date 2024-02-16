@@ -6,17 +6,17 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script lang="javascript">
-        window.location.replace('p-elc.html');
+        const jFileName = 'p-elc.json'
     </script>
-    <script src='physics-elc.js'></script>
+    <script src='math-input.js'></script>
     </head>
 <body>
 <header style="white-space: nowrap;">
      けいさんれんしゅうソフト <wbr> Calc-Prac
 </header>
-<!-- 文字は <button class="tile"></button> / 穴は <button class="input-box"></button> -->
+
 <article>
-    <h2 id="h2">問題</h2>
+    <h2 id="h2">問題 <a class="nolink" href="help.html" target="_blank"><img src="info.svg" alt="help" width="16px"></img></a></h2>
     <!-- 以下問題文 -->
     <p id="Q">
 
@@ -36,8 +36,6 @@
         </select>
         <div>*　*　*　*　*</div>
         <button id="reset-button">問題をスキップ</button>
-        <br>
-        <button id="help-button" onclick="showHelpme()">説明</button>(問題をスキップした扱いになります)
     </form>
     <br>
 </article>
