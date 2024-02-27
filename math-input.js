@@ -1,5 +1,15 @@
-// After you completed writing, raise this flag.
-let Completed = true;
+//   == Commands ==
+// 1. Mathmetical Environment
+// class='math'
+// 2. Fraction
+// <frac><fn>分子</fn><fd>分母</fd></frac>
+// 3. Buttons
+// <button class='tile'>smt</button>
+// <button class='tile tfunc'>(smt or sct)</button>
+// 4. Input Box
+// <button class='input-box'></button>
+// <button class='input-box wt'></button>
+// <button class='input-box nopt' 1='>' 2='=' 3='<'></button>
 
 let data;
 let QuestionsData = [];
@@ -7,9 +17,6 @@ let urlinfo = new Object();
 
 var scripts = document.getElementsByTagName( 'script' );
 var src = scripts[ scripts.length - 1 ].src;
-
-var query = src.substring( src.indexOf( '?' ) + 1 );
-var parameters = query.split( '&' );
 
 async function fetchData() {
     try {
@@ -50,16 +57,14 @@ window.onload = function() {
 function reset() {
     let Q = document.getElementById('Q');
     let resetButton = document.getElementById('reset-button');
-    if (Completed) {
-        if (history.length == 0) {
-            Q.innerHTML = '<h2>問題を一周しました</h2><br><button class="tile">R</button>をタップしてリスタート。<br><button class="input-box"></button><div id="secret-answer">0:Num:1,R:1</div>'
-            history = [...Array(QuestionsData.length)].map((_, i) => i);
-            charge = true;
-        } else {
-            let n = Math.floor(Math.random() * history.length);
-            Q.innerHTML = QuestionsData[history[n]];
-            history.splice(n, 1);
-        }
+    if (history.length == 0) {
+        Q.innerHTML = '<h2>問題を一周しました</h2><br><button class="tile">R</button>をタップしてリスタート。<br><button class="input-box"></button><div id="secret-answer">0:Num:1,R:1</div>'
+        history = [...Array(QuestionsData.length)].map((_, i) => i);
+        charge = true;
+    } else {
+        let n = Math.floor(Math.random() * history.length);
+        Q.innerHTML = QuestionsData[history[n]];
+        history.splice(n, 1);
     }
     let key = document.getElementsByClassName('tile');
     for (let i = 0; i < key.length; i++) {
