@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Calc-Prac</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+<header style="white-space: nowrap;">
+     けいさんれんしゅうソフト <wbr> Calc-Prac
+</header>
+
+<article>
+    <h2>以下の定積分をせよ．</h2>
+    <h3 id="QP">\[Question\]</h3>
+
+    <b>ア</b>
+    <select id="ア" onchange="ansCheck();">
+        <option value="">===</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="0">0</option>
+        <option value="-">－</option>
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="n">n</option>
+        <option value="π">π</option>
+        <option value="θ">θ</option>
+    </select>
+    <br>
+    <b>イ</b>
+    <select id="イ" onchange="ansCheck();">
+        <option value="">===</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="0">0</option>
+        <option value="-">－</option>
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="n">n</option>
+        <option value="π">π</option>
+        <option value="θ">θ</option>
+    </select>
+    <br>
+    <b>ウ</b>
+    <select id="ウ" onchange="ansCheck();">
+        <option value="">===</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="0">0</option>
+        <option value="-">－</option>
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="n">n</option>
+        <option value="π">π</option>
+        <option value="θ">θ</option>
+    </select>
+    <br>
+    <b>エ</b>
+    <select id="エ" onchange="ansCheck();">
+        <option value="">===</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="0">0</option>
+        <option value="-">－</option>
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="n">n</option>
+        <option value="π">π</option>
+        <option value="θ">θ</option>
+    </select>
+    <br>
+    <b>オ</b>
+    <select id="オ" onchange="ansCheck();">
+        <option value="">===</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="0">0</option>
+        <option value="-">－</option>
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="n">n</option>
+        <option value="π">π</option>
+        <option value="θ">θ</option>
+    </select>
+    <br><br>
+    <div id="OP">\[Memo\]</div>
+    <textarea style="width: 90%; height: 100pt;" id="IP"></textarea>
+    <br><br>
+    <script type="text/javascript">
+        let QP = document.getElementById('QP'), IP = document.getElementById('IP'), OP = document.getElementById('OP'), button = document.getElementById('button'), Qdata = [], Adata = [], Ans;
+        String.prototype.kana = function(){
+            return(
+                this
+                    .replaceAll('ア','\\fbox{ア}')
+                    .replaceAll('イ','\\fbox{イ}')
+                    .replaceAll('ウ','\\fbox{ウ}')
+                    .replaceAll('エ','\\fbox{エ}')
+                    .replaceAll('オ','\\fbox{オ}')
+            );
+        }
+        String.prototype.brac = function(){
+            return(
+                this
+                    .replaceAll('(','\\left(')
+                    .replaceAll(')','\\right)')
+                    .replaceAll('|','\\Big|')
+            );
+        }
+        async function fetchData() {
+            try {
+                const jsondata = await fetch('integer.json');
+                const expdata = await jsondata.json();
+                expdata.forEach(function (value, index) {
+                    Qdata[index] = value.question;
+                    Adata[index] = value.answer;
+                })
+                disp();
+            } catch (error) {
+                console.error('Error loading JSON file:', error);
+            }
+        }
+        function disp() {
+            let r = Math.floor(Math.random() * Qdata.length);
+            Ans = Adata[r]
+            QP.innerHTML = '\\[' + Qdata[r].kana().brac() + '\\]';
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub, "QP"]);
+        }
+        function ansCheck() {
+            let ansA = document.getElementById('ア');
+            let ansI = document.getElementById('イ');
+            let ansU = document.getElementById('ウ');
+            let ansE = document.getElementById('エ');
+            let ansO = document.getElementById('オ');
+            if (Ans == ansA.value + ansI.value + ansU.value + ansE.value + ansO.value) {
+                ansA.value = '';
+                ansI.value = '';
+                ansU.value = '';
+                ansE.value = '';
+                ansO.value = '';
+                disp();
+            }
+        }
+        window.onload = fetchData();
+        IP.oninput = function() {
+            OP.innerHTML = IP.value == '' ? '\\[Memo\\]' : IP.value.kana();
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub, "OP"]);
+        }
+    </script>
+</article>
+<footer>
+    Created by しおたじゅく
+    <audio id="T">
+        <source src="right.mp3" type="audio/mp3">
+    </audio>
+    <audio id="F">
+        <source src="wrong.mp3" type="audio/mp3">
+    </audio>
+</footer>
+</body>
+</html>
