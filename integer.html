@@ -159,10 +159,24 @@
             }
         }
         function disp() {
+            let ansA = document.getElementById('ア');
+            let ansI = document.getElementById('イ');
+            let ansU = document.getElementById('ウ');
+            let ansE = document.getElementById('エ');
+            let ansO = document.getElementById('オ');
             let r = Math.floor(Math.random() * Qdata.length);
             Ans = Adata[r]
             QP.innerHTML = '\\[' + Qdata[r].kana().brac() + '\\]';
             MathJax.Hub.Queue(["Typeset", MathJax.Hub, "QP"]);
+            ansA.value = '';
+            ansI.value = '';
+            ansU.value = '';
+            ansE.value = '';
+            ansO.value = '';
+            ansI.disabled = (Qdata[r].search('イ') == -1) ;
+            ansU.disabled = (Qdata[r].search('ウ') == -1) ;
+            ansE.disabled = (Qdata[r].search('エ') == -1) ;
+            ansO.disabled = (Qdata[r].search('オ') == -1) ;
         }
         function ansCheck() {
             let ansA = document.getElementById('ア');
@@ -171,11 +185,7 @@
             let ansE = document.getElementById('エ');
             let ansO = document.getElementById('オ');
             if (Ans == ansA.value + ansI.value + ansU.value + ansE.value + ansO.value) {
-                ansA.value = '';
-                ansI.value = '';
-                ansU.value = '';
-                ansE.value = '';
-                ansO.value = '';
+            
                 disp();
             }
         }
