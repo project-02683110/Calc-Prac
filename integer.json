@@ -6,8 +6,8 @@
 	},
 	{
 		"Num":"2",
-		"question":"\\int_{\\frac{\\pi}{8}}^{\\frac{\\pi}{4}}\\frac{dx}{\\sin{x}\\tan{x}}=\\frac{ア-\\sqrt{イ}}{ウ}",
-		"answer":"-222"
+		"question":"\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{2}}\\frac{dx}{\\sin{x}\\tan{x}}=アイ+\\sqrt{ウ}",
+		"answer":"-12"
 	},
 	{
 		"Num":"3",
@@ -21,8 +21,8 @@
 	},
 	{
 		"Num":"5",
-		"question":"\\int_{\\frac{\\pi}{8}}^{\\frac{\\pi}{4}}\\frac{dx}{\\sin^2{x}\\tan{x}}=ア+イ\\sqrt{ウ}",
-		"answer":"222"
+		"question":"\\int_{\\frac{\\pi}{8}}^{\\frac{\\pi}{4}}\\frac{dx}{\\sin^2{x}\\tan{x}}=ア+\\sqrt{イ}",
+		"answer":"12"
 	},
 	{
 		"Num":"6",
@@ -66,12 +66,12 @@
 	},
 	{
 		"Num":"4",
-		"question":"\\int\\frac{dx}{\\sin^3{x}}=\\frac{1}{ア}\\log{\\frac{イ\\sqrt{ウ}+エ}{ウ}}+\\sqrt{オ}-\\frac{1}{ウ}",
+		"question":"\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\frac{dx}{\\sin^3{x}}=\\frac{1}{ア}\\log{\\frac{イ\\sqrt{ウ}+エ}{ウ}}+\\sqrt{オ}-\\frac{1}{ウ}",
 		"answer":"44373"
 	},
 	{
 		"Num":"5",
-		"question":"\\int\\frac{dx}{\\cos^3{x}}=-\\frac{1}{ア}\\log(イ-ウ\\sqrt{エ})-\\frac{1}{\\sqrt{オ}}",
+		"question":"\\int_0^{\\frac{\\pi}{4}}\\frac{dx}{\\cos^3{x}}=-\\frac{1}{ア}\\log(イ-ウ\\sqrt{エ})-\\frac{1}{\\sqrt{オ}}",
 		"answer":"43222"
 	},
 	{
@@ -86,17 +86,17 @@
 	},
 	{
 		"Num":"8",
-		"question":"\\int e^x\\cos{x}\\,dx=-\\frac{ア}{イ}(e^{ウ}+エ)",
-		"answer":"12π1"
+		"question":"\\int_0^{\\pi}e^x\\cos{x}\\,dx=\\frac{アイ}{ウ}(e^{エ}+オ)",
+		"answer":"-12π1"
 	},
 	{
 		"Num":"9",
-		"question":"\\int e^{-x}\\sin{x}\\,dx=\\frac{ア}{イ}(e^{ウエ}+オ)",
+		"question":"\\int_0^{\\pi}e^{-x}\\sin{x}\\,dx=\\frac{ア}{イ}(e^{ウエ}+オ)",
 		"answer":"12-π1"
 	},
 	{
 		"Num":"10",
-		"question":"\\int e^{-x}\\cos{x}\\,dx=\\frac{ア}{イ}(e^{ウエ}+オ)",
+		"question":"\\int_0^{\\pi}e^{-x}\\cos{x}\\,dx=\\frac{ア}{イ}(e^{ウエ}+オ)",
 		"answer":"12-π1"
 	}
 ]
