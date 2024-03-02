@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500&display=swap&text=+-=1234567890abcdefghijklmnopqrstuvwxyzπθ');
 /*
 @font-face {
 	font-family: 'Century Schoolbook';
@@ -325,9 +326,15 @@ a.nolink {
     border: dashed 1px aquamarine;
 }
 article {
-    padding: 40px, 8px, 24px;
+    /*padding: 100px 8px 80px;*/
+    padding: 40px 8px 24px;
 }
 header {
+    /*position: fixed;
+    top: 0;
+    left : 0;
+    z-index: 10;
+    width: 100%;*/
     color: #fff;
     background-color: #888888;
     padding: 24px 12px;
@@ -335,10 +342,105 @@ header {
     font-size: 40px;
 }
 footer {
+    /*position: fixed;
+    bottom: 0;
+    right : 0;
+    z-index: 10;
+    width: 100%;*/
     color: #fff;
     background-color: #666666;
     padding: 24px 12px;
     text-align: right;
     padding-right: 40px;
     font-family: 'Cherry Bomb One', cursive;
+}
+#bgfade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: #44444488;
+    display: none;
+}
+#toggleMemo:checked + #bgfade{
+    display: block;    
+}
+#IP {
+    position: fixed;
+    width: 90%;
+    height: 40%;
+    bottom: 9%;
+    left: 4.9%;
+    z-index: 110;
+    background-color: #ffffffee;
+    resize: none;
+}
+#OP {
+    position: fixed;
+    width: 90%;
+    height: 40%;
+    top: 9%;
+    left: 5%;
+    z-index: 110;
+    background-color: #ffffffee;
+    border: black 1pt solid;
+}
+.sty{
+    position: relative;
+    margin: 10pt auto;
+    height: 60pt;
+    padding: 3em 2em 2em;
+    width: fit-content;
+    background-color: #eee;
+}
+.sty::before {
+	position: absolute;
+	content: "";
+	width: 95%;
+	height: 10px;
+	top: 0.5em;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	border-top: dotted 10px #fff; /*ドットの形・大きさ・色*/
+}
+.ltxbtn {
+    position: fixed;
+    width: 40pt;
+    height: 40pt;
+    left: 20pt;
+    z-index: 120;
+    color: white;
+    font: bold 20pt 'Kiwi Maru';
+    text-align: center;
+    vertical-align: middle;
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+}
+#toggleMemo {
+    position: fixed;
+    width: 40pt;
+    height: 40pt;
+    bottom: 20pt;
+    right: 20pt;
+    z-index: 120;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: black;
+    border-radius: 50%;
+    width: 40pt;
+    height: 40pt;
+    background-image: url("memo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20pt 20pt;
+    cursor: pointer;
+}
+#toggleMemo:checked {
+    background-color: gray;
 }

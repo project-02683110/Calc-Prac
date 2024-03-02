@@ -5,21 +5,36 @@
     <title>Calc-Prac</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <script id="MathJax-script" async src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        * { font-family: "Zen Old Mincho", "Klee One";}
+    </style>
 </head>
 <body>
+
 <header style="white-space: nowrap;">
      けいさんれんしゅうソフト <wbr> Calc-Prac
 </header>
 
+<input type="checkbox" id="toggleMemo" title="メモを開く/閉じる">
+<div id="bgfade">
+    <div id="OP" oncopy="return false;" oncontextmenu="return false;">\[Memo\]</div>
+    <textarea id="IP" placeholder="\[～\]でディスプレイ数式モード，\(～\)でインライン数式モード" oncopy="return false;" oncontextmenu="return false;"></textarea>
+    <button class="ltxbtn" style="bottom: 200pt;" onclick="insertLatex('\\','')" title="特殊文字を挿入する">\</button>
+    <button class="ltxbtn" style="bottom: 140pt;" onclick="insertLatex('{','}')" title="特殊文字を挿入する">{ }</button>
+    <button class="ltxbtn" style="bottom: 80pt;" onclick="copyLatex()" title="問題を張り付ける"><img src="copy.svg" width="28pt" style="margin: auto;"></img></button>
+    <button class="ltxbtn" style="bottom: 20pt;" onclick="deleteLatex()" title="メモを削除する"><img src="delete.svg" width="28pt" style="margin: auto;"></img></button>
+</div>
+
 <article>
     <h3>以下の定積分をせよ．</h3>
-    <div id="QP">\[Question\]</div>
+    <div class="sty"><p id="QP">Loading...</p></div>
 
-    <b>ア</b>
+    <table style="margin: 1em auto;">
+    <tr><th>ア</th><th>イ</th><th>ウ</th><th>エ</th><th>オ</th></tr>
+    <tr><td>
     <select id="ア" onchange="ansCheck();">
-        <option value="">===</option>
+        <option value="">==</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -37,10 +52,9 @@
         <option value="π">π</option>
         <option value="θ">θ</option>
     </select>
-    <br>
-    <b>イ</b>
+    </td><td>
     <select id="イ" onchange="ansCheck();">
-        <option value="">===</option>
+        <option value="">==</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -58,10 +72,9 @@
         <option value="π">π</option>
         <option value="θ">θ</option>
     </select>
-    <br>
-    <b>ウ</b>
+    </td><td>
     <select id="ウ" onchange="ansCheck();">
-        <option value="">===</option>
+        <option value="">==</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -79,10 +92,9 @@
         <option value="π">π</option>
         <option value="θ">θ</option>
     </select>
-    <br>
-    <b>エ</b>
+    </td><td>
     <select id="エ" onchange="ansCheck();">
-        <option value="">===</option>
+        <option value="">==</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -100,10 +112,9 @@
         <option value="π">π</option>
         <option value="θ">θ</option>
     </select>
-    <br>
-    <b>オ</b>
+    </td><td>
     <select id="オ" onchange="ansCheck();">
-        <option value="">===</option>
+        <option value="">==</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -121,15 +132,16 @@
         <option value="π">π</option>
         <option value="θ">θ</option>
     </select>
-    <br><br>
-    <div id="OP">\[Memo\]</div>
-    <textarea style="width: 90%; height: 100pt;" id="IP"></textarea>
+    </td></tr>
+    </table>
     <br><br>
     <script type="text/javascript">
-        let QP = document.getElementById('QP'), IP = document.getElementById('IP'), OP = document.getElementById('OP'), button = document.getElementById('button'), Qdata = [], Adata = [], Ans;
+        let QP = document.getElementById('QP'), IP = document.getElementById('IP'), OP = document.getElementById('OP'), button = document.getElementById('button'), Qdata = [], Adata = [], Ans, Qes;
         String.prototype.kana = function(){
             return(
                 this
+                    .replaceAll('+','\\mathbf{+}')
+                    .replaceAll('-','\\mathbf{-}')
                     .replaceAll('ア','\\fbox{ア}')
                     .replaceAll('イ','\\fbox{イ}')
                     .replaceAll('ウ','\\fbox{ウ}')
@@ -154,6 +166,7 @@
                     Adata[index] = value.answer;
                 })
                 disp();
+                MathJax.typeset([OP]);
             } catch (error) {
                 console.error('Error loading JSON file:', error);
             }
@@ -165,9 +178,9 @@
             let ansE = document.getElementById('エ');
             let ansO = document.getElementById('オ');
             let r = Math.floor(Math.random() * Qdata.length);
+            Qes = Qdata[r]
             Ans = Adata[r]
             QP.innerHTML = '\\[' + Qdata[r].kana().brac() + '\\]';
-            MathJax.Hub.Queue(["Typeset", MathJax.Hub, "QP"]);
             ansA.value = '';
             ansI.value = '';
             ansU.value = '';
@@ -177,6 +190,7 @@
             ansU.disabled = (Qdata[r].search('ウ') == -1) ;
             ansE.disabled = (Qdata[r].search('エ') == -1) ;
             ansO.disabled = (Qdata[r].search('オ') == -1) ;
+            MathJax.typeset([QP]);
         }
         function ansCheck() {
             let ansA = document.getElementById('ア');
@@ -185,17 +199,37 @@
             let ansE = document.getElementById('エ');
             let ansO = document.getElementById('オ');
             if (Ans == ansA.value + ansI.value + ansU.value + ansE.value + ansO.value) {
-            
                 disp();
             }
         }
-        window.onload = fetchData();
-        IP.oninput = function() {
+        function reload() {
             OP.innerHTML = IP.value == '' ? '\\[Memo\\]' : IP.value.kana();
-            MathJax.Hub.Queue(["Typeset", MathJax.Hub, "OP"]);
+            window.setTimeout(function(){
+                MathJax.typeset([OP]);
+            }, 100);
         }
+        function insertLatex(tx1, tx2) {
+            let ss = IP.selectionStart, se = IP.selectionEnd;
+	        IP.value = IP.value.substr(0, ss) + tx1 + IP.value.substr(ss, se - ss) + tx2 + IP.value.substr(se);
+            reload();
+            IP.focus();
+            IP.setSelectionRange(ss, se + tx1.length + tx2.length);
+        }
+        function copyLatex() {
+            IP.value += ('\\[' + Qes + '\\]\n');
+            reload();
+            IP.focus();
+        }
+        function deleteLatex() {
+            IP.value = '';
+            reload();
+            IP.focus();
+        }
+        window.onload = fetchData;
+        IP.oninput = reload;
     </script>
 </article>
+
 <footer>
     Created by しおたじゅく
     <audio id="T">
@@ -205,5 +239,6 @@
         <source src="wrong.mp3" type="audio/mp3">
     </audio>
 </footer>
+
 </body>
 </html>
