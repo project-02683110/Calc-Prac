@@ -60,11 +60,11 @@ function disp() {
     Ans = Adata[r];
     Lev = Number(Ldata[r]);
     LP.innerText = 'altitudedouble_arrow' + ('kid_star').repeat(Lev);
-    QP.innerHTML = '\\[' + Qdata[r].kana().brac() + '\\]';
+    QP.innerHTML = '\\[' + Qes.kana().brac() + '\\]';
     aiu.forEach( function(value) {
         document.getElementById(value)
             .value = ''
-            .disabled = (Qdata[r].search(value) == -1) ;
+            .disabled = (Qes.search(value) == -1) ;
     });
     MathJax.typeset([QP]);
 }
