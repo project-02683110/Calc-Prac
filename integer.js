@@ -101,7 +101,7 @@ function insertLatex(tx1, tx2) {
 }
 
 function copyLatex() {
-    insertLatex(('\\[' + Qes + '\\]'), '');
+    insertLatex(('#' + Qes + '#'), '');
 }
 
 function deleteLatex() {
@@ -111,4 +111,13 @@ function deleteLatex() {
     IP.focus();
 }
 
+var html = document.getElementsByTagName('html')[0];
+var originalViewport = window.innerHeight;
+
+function resizeHandler() {
+    var keyboardHeight = originalViewport - window.innerHeight
+    html.style.transform = 'translateY(' + keyboardHeight + 'px)'
+}
+
+window.visualViewport.addEventListener('resize', resizeHandler);
 window.onload = fetchData();
