@@ -36,7 +36,7 @@
 <input type="checkbox" id="toggleMemo" title="メモを開く/閉じる">
 <div id="bgfade">
     <div id="OP">\[Memo\]</div>
-    <textarea id="IP" placeholder="$～$や#～#でLaTex数式" oninput="reload();"></textarea>
+    <textarea id="IP" placeholder="$～$や#～#でLaTex数式" oninput="reload();" onfocus="ipof();" onblur="ipob();"></textarea>
     <button class="ltxbtn" style="top: 20pt;" onclick="insertLatex('#','#')" title="数式を挿入する">#</button>
     <button class="ltxbtn" style="top: 80pt;" onclick="insertLatex('{','}')" title="括弧をつける">{ }</button>
     <button class="ltxbtn" style="top: 140pt;" onclick="copyLatex()" title="問題を張り付ける"><img src="copy.svg" width="28pt" style="margin: auto;"></img></button>

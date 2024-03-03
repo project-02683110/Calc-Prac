@@ -111,4 +111,14 @@ function deleteLatex() {
     IP.focus();
 }
 
+function ipof() {
+    if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+        document.getElementsByTagName('html')[0].style.height = '60%';
+    }
+}
+
+function ipob() {
+    document.getElementsByTagName('html')[0].style.height = '100%';
+}
+
 window.onload = fetchData();
