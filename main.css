@@ -401,8 +401,9 @@ footer {
     position: relative;
     margin: 10pt auto;
     height: 60pt;
-    padding: 3em 2em 2em;
+    padding: 3em 1em 2em;
     width: fit-content;
+    font-size: calc(0.5vw + 12px);
     background-color: #eee;
 }
 .sty::before {
