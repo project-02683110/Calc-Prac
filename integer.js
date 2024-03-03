@@ -65,7 +65,7 @@ function disp() {
         document.getElementById(value)
             .value = ''
             .disabled = (Qes.search(value) < 0) ;
-        console.log(document.getElementById(value));
+        console.log(Qes.search(value) < 0);
     });
     MathJax.typeset([QP]);
 }
