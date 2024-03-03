@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap&text= Creatdbyしおたじゅく');
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap&text= けいさんれしゅうソフトえたごちょCalc-Pr');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500&display=swap&text=+-=1234567890abcdefghijklmnopqrstuvwxyzπθ');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500&display=swap');
 /*
 @font-face {
 	font-family: 'Century Schoolbook';
@@ -14,9 +14,15 @@
 	src: local('stix-two-text.ttf');
 }
 */
+@media (prefers-color-scheme: dark) {
+    * {
+        background-color: #222;
+        color: #ddd;
+    }
+}
 * {
     text-align: center;
-    font-family: 'Klee One', cursive;
+    font-family: 'Klee One', monospace;
 }
 b {
     font-family: 'Zen Kaku Gothic New', sans-serif;
@@ -79,7 +85,7 @@ button {
 }
 .tile {
     /*font-family: 'STIX Two Text', 'Century Schoolbook', 'Times New Roman';*/
-    font-family: 'Times New Roman';
+    font-family: 'Times New Roman', serif;
     font-style: italic;
     font-weight: bolder;
     height: 22px;
@@ -99,7 +105,7 @@ button {
     font-style: normal;
 }
 #del {
-    font-family: 'Times New Roman';
+    font-family: 'Times New Roman', serif;
     font-weight: bolder;
     height: 22px;
     width: 32px;
@@ -113,7 +119,7 @@ button {
     display: none;
 }
 .math {
-    font-family: 'Times New Roman';
+    font-family: 'Times New Roman', serif;
     font-style: italic;
     font-weight: bolder;
     margin: 0 4px;
@@ -338,7 +344,7 @@ header {
     color: #fff;
     background-color: #888888;
     padding: 24px 12px;
-    font-family: 'Monomaniac One', sans-serif;
+    font-family: 'Monomaniac One', monospace;
     font-size: 40px;
 }
 footer {
@@ -352,7 +358,7 @@ footer {
     padding: 24px 12px;
     text-align: right;
     padding-right: 40px;
-    font-family: 'Cherry Bomb One', cursive;
+    font-family: 'Cherry Bomb One', monospace;
 }
 #bgfade {
     position: fixed;
@@ -374,8 +380,10 @@ footer {
     bottom: 9%;
     left: 4.9%;
     z-index: 110;
+    color: black;
     background-color: #ffffffee;
     resize: none;
+    font-size: 16px;
 }
 #OP {
     position: fixed;
@@ -384,8 +392,10 @@ footer {
     top: 9%;
     left: 5%;
     z-index: 110;
+    color: black;
     background-color: #ffffffee;
     border: black 1pt solid;
+    font-size: 16px;
 }
 .sty{
     position: relative;
