@@ -378,7 +378,7 @@ footer {
     position: fixed;
     width: 90%;
     height: 40%;
-    bottom: 9%;
+    top: 9%;
     left: 4.9%;
     z-index: 110;
     color: black;
@@ -391,7 +391,7 @@ footer {
     position: fixed;
     width: 90%;
     height: 40%;
-    top: 9%;
+    bottom: 9%;
     left: 5%;
     z-index: 110;
     color: black;
