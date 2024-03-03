@@ -62,10 +62,10 @@ function disp() {
     LP.innerText = 'altitudedouble_arrow' + ('kid_star').repeat(Lev);
     QP.innerHTML = '\\[' + Qes.kana().brac() + '\\]';
     aiu.forEach( function(value) {
-        console.log(document.getElementById(value));
         document.getElementById(value)
             .value = ''
-            .disabled = (Qes.search(value) == -1) ;
+            .disabled = (Qes.search(value) < 0) ;
+        console.log(document.getElementById(value));
     });
     MathJax.typeset([QP]);
 }
