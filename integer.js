@@ -1,4 +1,4 @@
-let Qdata = [], Adata = [], Ans, Qes;
+let Qdata = [], Adata = [], Ldata = [], Ans, Qes, Lev;
 const aiu = ['ア','イ','ウ','エ','オ'];
 
 String.prototype.kana = function(){
@@ -44,6 +44,7 @@ async function fetchData() {
         expdata.forEach(function (value, index) {
             Qdata[index] = value.question;
             Adata[index] = value.answer;
+            Ldata[index] = value.level;
         })
         disp();
         MathJax.typeset([document.getElementById('QP')]);
@@ -54,9 +55,11 @@ async function fetchData() {
 }
 
 function disp() {
-    let QP = document.getElementById('QP'), r = Math.floor(Math.random() * Qdata.length);
-    Qes = Qdata[r]
-    Ans = Adata[r]
+    let QP = document.getElementById('QP'), LP = document.getElementById('LP'), r = Math.floor(Math.random() * Qdata.length);
+    Qes = Qdata[r];
+    Ans = Adata[r];
+    Lev = Number(Ldata[r]);
+    LP.innerText = 'altitudedouble_arrow' + ('kid_star').repeat(Lev);
     QP.innerHTML = '\\[' + Qdata[r].kana().brac() + '\\]';
     aiu.forEach( function(value) {
         document.getElementById(value)

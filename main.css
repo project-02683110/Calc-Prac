@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap&text= けいさんれしゅうソフトえたごちょCalc-Pr');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0');
 /*
 @font-face {
 	font-family: 'Century Schoolbook';
@@ -384,6 +385,7 @@ footer {
     background-color: #ffffffee;
     resize: none;
     font-size: 16px;
+    transform: scaleY(100%);
 }
 #OP {
     position: fixed;
@@ -396,6 +398,11 @@ footer {
     background-color: #ffffffee;
     border: black 1pt solid;
     font-size: 16px;
+    transform: scaleY(100%);
+}
+#LP {
+    color: gray;
+    font: 16pt 'Material Symbols Outlined';
 }
 .sty{
     position: relative;
@@ -425,7 +432,7 @@ footer {
     left: 20pt;
     z-index: 120;
     color: white;
-    font: bold 20pt 'Kiwi Maru';
+    font: 24pt 'Material Symbols Outlined';
     text-align: center;
     vertical-align: middle;
     background-color: black;
@@ -443,13 +450,12 @@ footer {
     -moz-appearance: none;
     appearance: none;
     background-color: black;
-    border-radius: 50%;
-    width: 40pt;
-    height: 40pt;
-    background-image: url("memo.svg");
+    background-image: url("note.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 20pt 20pt;
+    background-size: 24pt 24pt;
+    border: none;
+    border-radius: 50%;
     cursor: pointer;
 }
 #toggleMemo:checked {
