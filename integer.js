@@ -27,6 +27,11 @@ String.prototype.brac = function(){
 String.prototype.func = function(){
     return(
         this
+            .replaceAll('@a','\\alpha⁡')
+            .replaceAll('@b','\\beta⁡')
+            .replaceAll('@g','\\gumma⁡')
+            .replaceAll('@p','\\pi⁡')
+            .replaceAll('@h','\\theta⁡')
             .replaceAll('@r','\\sqrt{⁡}')
             .replaceAll('@f','\\frac{⁡}{}')
             .replaceAll('@l','\\log{⁡}')
