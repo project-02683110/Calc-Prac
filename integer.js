@@ -1,4 +1,4 @@
-let Qdata = [], Adata = [], Idata = [], Ldata = [], Ans, Qes, Int, Lev;
+let Qdata = [], Adata = [], Ldata = [], Ans, Qes, Int, Lev;
 const aiu = ['ア','イ','ウ','エ','オ'];
 
 String.prototype.kana = function(){
@@ -27,19 +27,20 @@ String.prototype.brac = function(){
 String.prototype.func = function(){
     return(
         this
-            .replaceAll(/@a/gi,'\\alpha⁡')
-            .replaceAll(/@b/gi,'\\beta⁡')
-            .replaceAll(/@g/gi,'\\gumma⁡')
-            .replaceAll(/@p/gi,'\\pi⁡')
-            .replaceAll(/@h/gi,'\\theta⁡')
-            .replaceAll(/@r/gi,'\\sqrt{⁡}')
-            .replaceAll(/@f/gi,'\\frac{⁡}{}')
-            .replaceAll(/@l/gi,'\\log{⁡}')
-            .replaceAll(/@p/gi,'^{⁡}')
-            .replaceAll(/@s/gi,'\\sin{⁡}')
-            .replaceAll(/@c/gi,'\\cos{⁡}')
-            .replaceAll(/@t/gi,'\\tan{⁡}')
-            .replaceAll(/@i/gi,Int + '⁡dx')
+            .replaceAll('@a','\\alpha⁡')
+            .replaceAll('@b','\\beta⁡')
+            .replaceAll('@g','\\gumma⁡')
+            .replaceAll('@p','\\pi⁡')
+            .replaceAll('@h','\\theta⁡')
+            .replaceAll('@r','\\sqrt{⁡}')
+            .replaceAll('@f','\\frac{⁡}{}')
+            .replaceAll('@l','\\log{⁡}')
+            .replaceAll('@p','^{⁡}')
+            .replaceAll('@s','\\sin{⁡}')
+            .replaceAll('@c','\\cos{⁡}')
+            .replaceAll('@t','\\tan{⁡}')
+            .replaceAll('@y','\\int')
+            .replaceAll('@i',Int + '⁡dx')
     );
 }
 
