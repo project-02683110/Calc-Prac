@@ -20,6 +20,9 @@
         background-color: #222;
         color: #ddd;
     }
+    #QP::before {
+        border-top: dotted 10px #222;
+    }
 }
 * {
     text-align: center;
@@ -404,16 +407,17 @@ footer {
     color: gray;
     font: 16pt 'Material Symbols Outlined';
 }
-.sty{
+#QP{
     position: relative;
     margin: 10pt auto;
     height: 60pt;
     padding: 3em 1em 2em;
     width: fit-content;
     font-size: calc(0.5vw + 12px);
+    color: black;
     background-color: #eee;
 }
-.sty::before {
+#QP::before {
 	position: absolute;
 	content: "";
 	width: 95%;
@@ -423,7 +427,7 @@ footer {
 	right: 0;
 	bottom: 0;
 	margin: 0 auto;
-	border-top: dotted 10px #fff; /*ドットの形・大きさ・色*/
+	border-top: dotted 10px white;
 }
 .ltxbtn {
     position: fixed;
