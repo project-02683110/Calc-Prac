@@ -30,7 +30,7 @@ String.prototype.func = function(){
         this
             .replaceAll('@a','\\alpha⁡')
             .replaceAll('@b','\\beta⁡')
-            .replaceAll('@g','\\gumma⁡')
+            .replaceAll('@g','\\gamma⁡')
             .replaceAll('@p','\\pi⁡')
             .replaceAll('@h','\\theta⁡')
             .replaceAll('@r','\\sqrt{⁡}')
