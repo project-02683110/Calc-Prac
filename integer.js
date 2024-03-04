@@ -12,7 +12,7 @@ String.prototype.kana = function(){
             .replaceAll('エ','\\fbox{エ}')
             .replaceAll('オ','\\fbox{オ}')
             .replaceAll('\\sqrt{','\\sqrt{⁬')
-            .replaceAll(/d[A-Za-z]=/g,'\\,\\$&\\,')
+            .replaceAll(/d[A-Za-z]=/g,'\\,$&')
     );
 }
 
