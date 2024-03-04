@@ -53,7 +53,7 @@ async function fetchData() {
         expdata.forEach(function (value, index) {
             Qdata[index] = value.question;
             Adata[index] = value.answer;
-            Idata[index] = value.range;
+            Rdata[index] = value.range;
             Ldata[index] = value.level;
         })
         disp();
