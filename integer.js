@@ -1,4 +1,4 @@
-let Qdata = [], Adata = [], Ldata = [], Ans, Qes, Lev;
+let Qdata = [], Adata = [], Ldata = [], Ans, Qes, Int, Lev;
 const aiu = ['ア','イ','ウ','エ','オ'];
 
 String.prototype.kana = function(){
@@ -27,18 +27,19 @@ String.prototype.brac = function(){
 String.prototype.func = function(){
     return(
         this
-            .replaceAll('@a','\\alpha⁡')
-            .replaceAll('@b','\\beta⁡')
-            .replaceAll('@g','\\gumma⁡')
-            .replaceAll('@p','\\pi⁡')
-            .replaceAll('@h','\\theta⁡')
-            .replaceAll('@r','\\sqrt{⁡}')
-            .replaceAll('@f','\\frac{⁡}{}')
-            .replaceAll('@l','\\log{⁡}')
-            .replaceAll('@p','^{⁡}')
-            .replaceAll('@s','\\sin{⁡}')
-            .replaceAll('@c','\\cos{⁡}')
-            .replaceAll('@t','\\tan{⁡}')
+            .replaceAll(/@a/gi,'\\alpha⁡')
+            .replaceAll(/@b/gi,'\\beta⁡')
+            .replaceAll(/@g/gi,'\\gumma⁡')
+            .replaceAll(/@p/gi,'\\pi⁡')
+            .replaceAll(/@h/gi,'\\theta⁡')
+            .replaceAll(/@r/gi,'\\sqrt{⁡}')
+            .replaceAll(/@f/gi,'\\frac{⁡}{}')
+            .replaceAll(/@l/gi,'\\log{⁡}')
+            .replaceAll(/@p/gi,'^{⁡}')
+            .replaceAll(/@s/gi,'\\sin{⁡}')
+            .replaceAll(/@c/gi,'\\cos{⁡}')
+            .replaceAll(/@t/gi,'\\tan{⁡}')
+            .replaceAll(/@i/gi,Int + '⁡dx')
     );
 }
 
@@ -49,6 +50,7 @@ async function fetchData() {
         expdata.forEach(function (value, index) {
             Qdata[index] = value.question;
             Adata[index] = value.answer;
+            Idata[index] = value.int;
             Ldata[index] = value.level;
         })
         disp();
@@ -63,6 +65,7 @@ function disp() {
     let QP = document.getElementById('QP'), LP = document.getElementById('LP'), r = Math.floor(Math.random() * Qdata.length);
     Qes = Qdata[r];
     Ans = Adata[r];
+    Int = Idata[r];
     Lev = Number(Ldata[r]);
     LP.innerText = 'altitudedouble_arrow' + ('kid_star').repeat(Lev);
     QP.innerHTML = '\\[' + Qes.kana().brac() + '\\]';
