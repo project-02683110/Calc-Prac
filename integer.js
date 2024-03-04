@@ -12,6 +12,7 @@ String.prototype.kana = function(){
             .replaceAll('エ','\\fbox{エ}')
             .replaceAll('オ','\\fbox{オ}')
             .replaceAll('\\sqrt{','\\sqrt{⁬')
+            .replaceAll(/d[A-Za-z]/,'\\,\\mathrm{$&}\\,')
     );
 }
 
@@ -39,8 +40,8 @@ String.prototype.func = function(){
             .replaceAll('@s','\\sin{⁡}')
             .replaceAll('@c','\\cos{⁡}')
             .replaceAll('@t','\\tan{⁡}')
-            .replaceAll('@y','\\int_{⁡}^{}\\,dx')
-            .replaceAll('@i',Int + '⁡\\,dx')
+            .replaceAll('@y','\\int_{⁡}^{}dx')
+            .replaceAll('@i',Int + '⁡dx')
     );
 }
 

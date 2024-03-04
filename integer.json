@@ -113,28 +113,28 @@
 	},
 	{
 		"Num":"7",
-		"question":"\\int_{0}^{\\pi}e^x\\sin{x}\\,dx=\\frac{ア}{イ}(e^{ウ}+エ)",
+		"question":"\\int_{0}^{\\pi}e^x\\sin{x}dx=\\frac{ア}{イ}(e^{ウ}+エ)",
 		"answer":"12π1",
 		"int":"\\int_{0}^{\\pi}",
 		"level":"1"
 	},
 	{
 		"Num":"8",
-		"question":"\\int_{0}^{\\pi}e^x\\cos{x}\\,dx=\\frac{アイ}{ウ}(e^{エ}+オ)",
+		"question":"\\int_{0}^{\\pi}e^x\\cos{x}dx=\\frac{アイ}{ウ}(e^{エ}+オ)",
 		"answer":"-12π1",
 		"int":"\\int_{0}^{\\pi}",
 		"level":"1"
 	},
 	{
 		"Num":"9",
-		"question":"\\int_{0}^{\\pi}e^{-x}\\sin{x}\\,dx=\\frac{ア}{イ}(e^{ウエ}+オ)",
+		"question":"\\int_{0}^{\\pi}e^{-x}\\sin{x}dx=\\frac{ア}{イ}(e^{ウエ}+オ)",
 		"answer":"12-π1",
 		"int":"\\int_{0}^{\\pi}",
 		"level":"1"
 	},
 	{
 		"Num":"10",
-		"question":"\\int_{0}^{\\pi}e^{-x}\\cos{x}\\,dx=\\frac{ア}{イ}(e^{ウエ}+オ)",
+		"question":"\\int_{0}^{\\pi}e^{-x}\\cos{x}dx=\\frac{ア}{イ}(e^{ウエ}+オ)",
 		"answer":"12-π1",
 		"int":"\\int_{0}^{\\pi}",
 		"level":"1"
