@@ -1,4 +1,4 @@
-let Qdata = [], Adata = [], Ldata = [], Ans, Qes, Int, Lev;
+let Qdata = [], Adata = [], Idata = [], Ldata = [], Ans, Qes, Int, Lev;
 const aiu = ['ア','イ','ウ','エ','オ'];
 
 String.prototype.kana = function(){
