@@ -1,4 +1,4 @@
-let Qdata = [], Adata = [], Idata = [], Ldata = [], Ans, Qes, Int, Lev;
+let Qdata = [], Adata = [], Rdata = [], Ldata = [], Ans, Qes, Rng, Lev;
 const aiu = ['ア','イ','ウ','エ','オ'];
 
 String.prototype.kana = function(){
@@ -41,7 +41,8 @@ String.prototype.func = function(){
             .replaceAll('@c','\\cos{⁡}')
             .replaceAll('@t','\\tan{⁡}')
             .replaceAll('@y','\\int_{⁡}^{}dx')
-            .replaceAll('@i',Int + '⁡dx')
+            .replaceAll('@i','\\int' + Rng + '⁡dx')
+            .replaceAll('@k','\\left[⁡\\right]' + Rng)
     );
 }
 
@@ -52,7 +53,7 @@ async function fetchData() {
         expdata.forEach(function (value, index) {
             Qdata[index] = value.question;
             Adata[index] = value.answer;
-            Idata[index] = value.int;
+            Idata[index] = value.range;
             Ldata[index] = value.level;
         })
         disp();
@@ -67,7 +68,7 @@ function disp() {
     let QP = document.getElementById('QP'), LP = document.getElementById('LP'), r = Math.floor(Math.random() * Qdata.length);
     Qes = Qdata[r];
     Ans = Adata[r];
-    Int = Idata[r];
+    Rng = Rdata[r];
     Lev = Number(Ldata[r]);
     LP.innerText = 'altitudedouble_arrow' + ('kid_star').repeat(Lev);
     QP.innerHTML = '\\[' + Qes.kana().brac() + '\\]';
