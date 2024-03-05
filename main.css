@@ -421,7 +421,7 @@ footer {
 	margin: 0 auto;
 	border-top: dotted 10px white;
 }
-.mso {
+.mso > td {
     color: gray !important;
     font-family: 'Material Symbols Outlined', sans-serif !important;
     font-size: 16pt !important;
