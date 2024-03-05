@@ -133,5 +133,4 @@ function killData() {
 }
 
 window.onload = fetchData();
-window.onpagehide = killData();
-window.onbeforeunload = killData();
+window.onblur = killData();
