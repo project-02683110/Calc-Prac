@@ -50,7 +50,9 @@ String.prototype.func = function(){
 async function fetchData() {
     try {
         const jsondata = await fetch('https://script.google.com/macros/s/AKfycbzPa5cnSRdws8HQ1o-yQKz4qxLkH9j3ixnP_lDqiSuG6SzrTmY3hpx8p3ExBS5RLvBO/exec', {mode: 'no-cors'}); // ('integer.json');
+        console.log(jsondata);
         const expdata = await jsondata.json();
+        console.log(expdata);
         expdata.forEach(function (value, index) {
             Qdata[index] = value.question;
             Adata[index] = value.answer;
