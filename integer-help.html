@@ -10,7 +10,8 @@
             tex: {
                 inlineMath: [
                     ['$', '$'],
-                    ['\\(', '\\)']
+                    ['\\(', '\\)'],
+                    ['##','##']
                 ],
                 displayMath: [
                     ['$$', '$$'],
@@ -34,7 +35,7 @@
 
 <input type="checkbox" id="toggleMemo" title="メモを開く/閉じる">
 <div id="bgfade">
-    <textarea id="IP" placeholder="$～$や#～#でLaTeX数式"></textarea>
+    <textarea id="IP" placeholder="$～$や#～#でLaTeX数式" disabled></textarea>
     <div id="OP">\[Memo\]</div>
     <button class="ltxbtn icon" style="top: 20pt;" title="数式を挿入する">function</button>
     <button class="ltxbtn" style="top: 80pt;" title="括弧をつける">data_object</button>
@@ -114,6 +115,18 @@
             <th colspan="2">教科書Lv.</th><th colspan="2">大学入試Lv.</th><th>激難</th>
         </tr>
     </table>
+
+    <h3>\(\LaTeX\)の入力方法</h3>
+    <code>#～#</code>などを用いることで\(\LaTeX\)を利用できます。
+    <table align="center" border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <th>インライン数式</th><td><code>$～$</code></td><td><code>\(～\)</code></td><td><code>##～##</code></td>
+        </tr>
+        <tr>
+            <th>ブロック数式</th><td><code>$$～$$</code></td><td><code>\[～\]</code></td><td><code>#～#</code></td>
+        </tr>
+    </table>
+    <code>#\sin{2x}#</code>のように，文字は<code>{～}</code>で括ってください。
 
     <h3>\(\LaTeX\)入力時に使えるコマンド</h3>
     <table align="center" border="1" cellspacing="0" cellpadding="10">

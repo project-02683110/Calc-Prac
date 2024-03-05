@@ -16,7 +16,7 @@
 	{
 		"Num":"3",
 		"question":"\\int_{0}^{\\frac{\\pi}{4}}\\frac{\\sin{x}-\\cos{x}}{\\sin{2x}+1}dx=\\frac{\\sqrt{ア}-イ}{ウ}",
-		"answer":"-222",
+		"answer":"222",
 		"range":"_{0}^{\\frac{\\pi}{4}}",
 		"level":"1"
 	},
