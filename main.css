@@ -396,7 +396,8 @@ footer {
 }
 #LP {
     color: gray;
-    font: 16pt 'Material Symbols Outlined';
+    font-family: 'Material Symbols Outlined', sans-serif;
+    font-size: 16pt ;
 }
 #QP{
     position: relative;
@@ -419,6 +420,11 @@ footer {
 	bottom: 0;
 	margin: 0 auto;
 	border-top: dotted 10px white;
+}
+.mso {
+    color: gray !important;
+    font-family: 'Material Symbols Outlined', sans-serif !important;
+    font-size: 16pt !important;
 }
 .ltxbtn {
     position: fixed;

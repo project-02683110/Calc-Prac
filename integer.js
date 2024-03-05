@@ -36,11 +36,12 @@ String.prototype.func = function(){
             .replaceAll('@r','\\sqrt{⁡}')
             .replaceAll('@f','\\frac{⁡}{}')
             .replaceAll('@l','\\log{⁡}')
+            .replaceAll('@n','\\ln{⁡}')
             .replaceAll('@p','^{⁡}')
             .replaceAll('@s','\\sin{⁡}')
             .replaceAll('@c','\\cos{⁡}')
             .replaceAll('@t','\\tan{⁡}')
-            .replaceAll('@y','\\int_{⁡}^{}dx')
+            .replaceAll('@y','\\int_{⁡}^{}')
             .replaceAll('@i','\\int' + Rng + '⁡dx')
             .replaceAll('@k','\\left[⁡\\right]' + Rng)
     );
@@ -70,7 +71,7 @@ function disp() {
     Ans = Adata[r];
     Rng = Rdata[r];
     Lev = Number(Ldata[r]);
-    LP.innerText = 'altitudedouble_arrow' + ('kid_star').repeat(Lev);
+    LP.innerText = 'altitudedouble_arrow' + ('kid_star').repeat(Lev) + ('remove').repeat(5-Lev);
     QP.innerHTML = '\\[' + Qes.kana().brac() + '\\]';
     aiu.forEach( function(value) {
         document.getElementById(value).value = ''
@@ -122,16 +123,6 @@ function deleteLatex() {
     IP.value = '';
     reload();
     IP.focus();
-}
-
-function ipof() {
-    if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
-        document.getElementById('bgfade').style.height = '60%';
-    }
-}
-
-function ipob() {
-    document.getElementById('bgfade').style.height = '100%';
 }
 
 window.onload = fetchData();

@@ -35,7 +35,7 @@
 
 <input type="checkbox" id="toggleMemo" title="メモを開く/閉じる">
 <div id="bgfade">
-    <textarea id="IP" placeholder="$～$や#～#でLaTex数式" oninput="reload();" onfocus="ipof();" onblur="ipob();"></textarea>
+    <textarea id="IP" placeholder="$～$や#～#でLaTeX数式" oninput="reload();"></textarea>
     <div id="OP">\[Memo\]</div>
     <button class="ltxbtn icon" style="top: 20pt;" onclick="insertLatex('#','#')" title="数式を挿入する">function</button>
     <button class="ltxbtn" style="top: 80pt;" onclick="insertLatex('{','}')" title="括弧をつける">data_object</button>
@@ -48,112 +48,122 @@
     <div id="QP">Loading...</div>
     <div id="LP">altitudedouble_arrowsync</div>
 
-    <table style="margin: 1em auto;">
-    <tr><th>ア</th><th>イ</th><th>ウ</th><th>エ</th><th>オ</th></tr>
-    <tr><td>
-    <select id="ア" onchange="ansCheck();" disabled>
-        <option value="" disabled selected>==</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="0">0</option>
-        <option value="-">－</option>
-        <option value="a">a</option>
-        <option value="b">b</option>
-        <option value="n">n</option>
-        <option value="π">π</option>
-        <option value="θ">θ</option>
-    </select>
-    </td><td>
-    <select id="イ" onchange="ansCheck();" disabled>
-        <option value="" disabled selected>==</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="0">0</option>
-        <option value="-">－</option>
-        <option value="a">a</option>
-        <option value="b">b</option>
-        <option value="n">n</option>
-        <option value="π">π</option>
-        <option value="θ">θ</option>
-    </select>
-    </td><td>
-    <select id="ウ" onchange="ansCheck();" disabled>
-        <option value="" disabled selected>==</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="0">0</option>
-        <option value="-">－</option>
-        <option value="a">a</option>
-        <option value="b">b</option>
-        <option value="n">n</option>
-        <option value="π">π</option>
-        <option value="θ">θ</option>
-    </select>
-    </td><td>
-    <select id="エ" onchange="ansCheck();" disabled>
-        <option value="" disabled selected>==</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="0">0</option>
-        <option value="-">－</option>
-        <option value="a">a</option>
-        <option value="b">b</option>
-        <option value="n">n</option>
-        <option value="π">π</option>
-        <option value="θ">θ</option>
-    </select>
-    </td><td>
-    <select id="オ" onchange="ansCheck();" disabled>
-        <option value="" disabled selected>==</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="0">0</option>
-        <option value="-">－</option>
-        <option value="a">a</option>
-        <option value="b">b</option>
-        <option value="n">n</option>
-        <option value="π">π</option>
-        <option value="θ">θ</option>
-    </select>
-    </td></tr>
+    <table align="center">
+        <tr>
+            <th>ア</th>
+            <th>イ</th>
+            <th>ウ</th>
+            <th>エ</th>
+            <th>オ</th>
+        </tr>
+        <tr>
+            <td>
+                <select id="ア" onchange="ansCheck();" disabled>
+                    <option value="" disabled selected>　　</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="0">0</option>
+                    <option value="-">－</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="n">n</option>
+                    <option value="π">π</option>
+                    <option value="θ">θ</option>
+                </select>
+            </td>
+            <td>
+                <select id="イ" onchange="ansCheck();" disabled>
+                    <option value="" disabled selected>　　</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="0">0</option>
+                    <option value="-">－</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="n">n</option>
+                    <option value="π">π</option>
+                    <option value="θ">θ</option>
+                </select>
+            </td>
+            <td>
+                <select id="ウ" onchange="ansCheck();" disabled>
+                    <option value="" disabled selected>　　</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="0">0</option>
+                    <option value="-">－</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="n">n</option>
+                    <option value="π">π</option>
+                    <option value="θ">θ</option>
+                </select>
+            </td>
+            <td>
+                <select id="エ" onchange="ansCheck();" disabled>
+                    <option value="" disabled selected>　　</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="0">0</option>
+                    <option value="-">－</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="n">n</option>
+                    <option value="π">π</option>
+                    <option value="θ">θ</option>
+                </select>
+            </td>
+            <td>
+                <select id="オ" onchange="ansCheck();" disabled>
+                    <option value="" disabled selected>　　</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="0">0</option>
+                    <option value="-">－</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="n">n</option>
+                    <option value="π">π</option>
+                    <option value="θ">θ</option>
+                </select>
+            </td>
+        </tr>
     </table>
-    <br><br>
-    @a->\(\alpha\), @b->\(\beta\), @g->\(\gamma\), @p->\(\pi\), @h->\(\theta\), <wbr>@r->√, @f->/, @l->log, @p->^, <wbr>@s->sin, @c->cos, @t->tan, @i(@y)->∫, @k->[]
     <br><br>
 </article>
 

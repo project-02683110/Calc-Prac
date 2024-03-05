@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html oncopy="return false;" oncut="return false;" oncontextmenu="return false;" style="user-select: none;">
+<head>
+    <meta charset='utf-8'>
+    <title>Calc-Prac</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1,maximum-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]'],
+                    ['#', '#']
+                ]
+            },
+            options: {
+                enableMenu: false
+            }
+        };
+        </script>
+    <script id="MathJax-script" async src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>*{font-family:"Zen Old Mincho",serif;}</style>
+</head>
+<body>
+
+<header style="white-space: nowrap;">
+     けいさんれんしゅうソフト <wbr> Calc-Prac
+</header>
+
+<input type="checkbox" id="toggleMemo" title="メモを開く/閉じる">
+<div id="bgfade">
+    <textarea id="IP" placeholder="$～$や#～#でLaTeX数式"></textarea>
+    <div id="OP">\[Memo\]</div>
+    <button class="ltxbtn icon" style="top: 20pt;" title="数式を挿入する">function</button>
+    <button class="ltxbtn" style="top: 80pt;" title="括弧をつける">data_object</button>
+    <button class="ltxbtn" style="top: 140pt;" title="問題を張り付ける">content_paste</button>
+    <button class="ltxbtn" style="top: 200pt;" title="メモを削除する">delete</button>
+</div>
+
+<article>
+    <h1>このページはヘルプページです</h1>
+    <div style="border: 1pt dashed brown;">
+    <h3>以下の定積分をせよ．</h3>
+    <div id="QP" style="font-family: Klee One;">[ここに穴埋め形式の問題が表示されます]</div>
+    <div id="LP">altitudedouble_arrowkid_starkid_starremoveremoveremove</div>
+
+    <table align="center">
+        <tr>
+            <th>ア</th>
+            <th>イ</th>
+            <th>ウ</th>
+            <th>エ</th>
+            <th>オ</th>
+        </tr>
+        <tr>
+            <td>
+                <select>
+                    <option disabled selected>　　</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>0</option>
+                    <option>－</option>
+                    <option>a</option>
+                    <option>b</option>
+                    <option>n</option>
+                    <option>π</option>
+                    <option>θ</option>
+                </select>
+            </td>
+            <td>
+                <select disabled>
+                    <option disabled selected>　　</option>
+                </select>
+            </td>
+            <td>
+                <select disabled>
+                    <option disabled selected>　　</option>
+                </select>
+            </td>
+            <td>
+                <select disabled>
+                    <option disabled selected>　　</option>
+                </select>
+            </td>
+            <td>
+                <select disabled>
+                    <option disabled selected>　　</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+    <br><br>
+
+    <h3>難易度</h3>
+    <table align="center" border="1" cellspacing="0" cellpadding="10">
+        <tr class="mso">
+            <td>kid_starremoveremoveremoveremove</td><td>kid_starkid_starremoveremoveremove</td><td>kid_starkid_starkid_starremoveremove</td><td>kid_starkid_starkid_starkid_starremove</td><td>kid_starkid_starkid_starkid_starkid_star</td>
+        </tr>
+        <tr>
+            <th colspan="2">教科書Lv.</th><th colspan="2">大学入試Lv.</th><th>激難</th>
+        </tr>
+    </table>
+
+    <h3>\(\LaTeX\)入力時に使えるコマンド</h3>
+    <table align="center" border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <th>関数</th><th>@s</th><th>@c</th><th>@t</th><th>@l</th><th>@n</th>
+        </tr>
+        <tr>
+            <td>出力結果</td><td>\(\sin\)</td><td>\(\cos\)</td><td>\(\tan\)</td><td>\(\log\)</td><td>\(\ln\)</td>
+        </tr>
+        <tr>
+            <th>数学記号</th><th>@r</th><th>@f</th><th>@p</th><th>@i</th><th>@k</th>
+        </tr>
+        <tr>
+            <td>出力結果</td><td>\(\sqrt{⁬a}\)</td><td>\(\dfrac{a}{b}\)</td><td>\(a^b\)</td><td>\(\displaystyle\int\)</td><td>\(\big[\;\big]\)</td>
+        </tr>
+        <tr>
+            <th>ギリシャ文字</th><th>@a</th><th>@b</th><th>@g</th><th>@p</th><th>@h</th>
+        </tr>
+        <tr>
+            <td>出力結果</td><td>\(\alpha\)</td><td>\(\beta\)</td><td>\(\gamma\)</td><td>\(\pi\)</td><td>\(\theta\)</td>
+        </tr>
+    </table>
+    <caption>(純粋な\(\displaystyle\int\)記号を出すには「<span style="font-weight: bold;">@y</span>」を用いてください)</caption>
+    <br><br>
+</article>
+
+<footer>
+    Created by しおたじゅく
+</footer>
+
+</body>
+</html>
