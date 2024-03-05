@@ -125,12 +125,4 @@ function deleteLatex() {
     IP.focus();
 }
 
-function killData() {
-    document.getElementById('QP').innerHTML = 'Killing...';
-    document.getElementById('IP').value = '';
-    document.getElementById('OP').innerHTML = '\\[Memo\\]';
-    location.reload();
-}
-
 window.onload = fetchData();
-window.onblur = killData();

@@ -321,6 +321,12 @@ sup {
 a.nolink {
     color: black;
 }
+a::after {
+    color: grey;
+    font-family: 'Material Symbols Outlined', sans-serif;
+    font-size: 6px;
+    content: 'link';
+}
 .ex {
     padding: 20px;
     background-color: aliceblue;
@@ -397,7 +403,7 @@ footer {
 #LP {
     color: gray;
     font-family: 'Material Symbols Outlined', sans-serif;
-    font-size: 16pt ;
+    font-size: 16px;
 }
 #QP{
     position: relative;
@@ -424,7 +430,7 @@ footer {
 .mso th {
     color: gray !important;
     font-family: 'Material Symbols Outlined', sans-serif !important;
-    font-size: 16pt !important;
+    font-size: 16px !important;
     font-weight: normal;
 }
 .ltxbtn {
