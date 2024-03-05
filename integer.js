@@ -125,4 +125,11 @@ function deleteLatex() {
     IP.focus();
 }
 
+function killData() {
+    QP.innerHTML = 'Killing...'
+    location.reload();
+}
+
 window.onload = fetchData();
+window.onpagehide = killData();
+window.onbeforeunload = killData();
