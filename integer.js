@@ -49,7 +49,7 @@ String.prototype.func = function(){
 
 async function fetchData() {
     try {
-        const jsondata = await fetch('integer.json');
+        const jsondata = await fetch('https://script.google.com/macros/s/AKfycbzPa5cnSRdws8HQ1o-yQKz4qxLkH9j3ixnP_lDqiSuG6SzrTmY3hpx8p3ExBS5RLvBO/exec', {mode: 'no-cors'}); // ('integer.json');
         const expdata = await jsondata.json();
         expdata.forEach(function (value, index) {
             Qdata[index] = value.question;
