@@ -126,7 +126,9 @@ function deleteLatex() {
 }
 
 function killData() {
-    QP.innerHTML = 'Killing...'
+    document.getElementById('QP').innerHTML = 'Killing...';
+    document.getElementById('IP').value = '';
+    document.getElementById('OP').innerHTML = '\\[Memo\\]';
     location.reload();
 }
 
