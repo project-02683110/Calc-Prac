@@ -49,7 +49,7 @@ String.prototype.func = function(){
 
 async function fetchData() {
     try {
-        const jsondata = await fetch('https://script.google.com/macros/s/AKfycbzPa5cnSRdws8HQ1o-yQKz4qxLkH9j3ixnP_lDqiSuG6SzrTmY3hpx8p3ExBS5RLvBO/exec', {mode: 'no-cors'}); // ('integer.json');
+        const jsondata = await fetch('https://script.google.com/macros/s/AKfycbzPa5cnSRdws8HQ1o-yQKz4qxLkH9j3ixnP_lDqiSuG6SzrTmY3hpx8p3ExBS5RLvBO/exec'); // ('integer.json'); , {mode: 'no-cors'}
         console.log(jsondata);
         const expdata = await jsondata.json();
         console.log(expdata);
@@ -72,7 +72,7 @@ function disp() {
     Qes = Qdata[r];
     Ans = Adata[r];
     Rng = Rdata[r];
-    Lev = Number(Ldata[r]);
+    Lev = Ldata[r];
     LP.innerText = 'altitudedouble_arrow' + ('kid_star').repeat(Lev) + ('remove').repeat(5-Lev);
     QP.innerHTML = '\\[' + Qes.kana().brac() + '\\]';
     aiu.forEach( function(value) {
