@@ -6,11 +6,7 @@ String.prototype.kana = function(){
         this
             .replaceAll('+','\\mathbf{+}')
             .replaceAll('-','\\mathbf{-}')
-            .replaceAll('ア','\\fbox{ア}')
-            .replaceAll('イ','\\fbox{イ}')
-            .replaceAll('ウ','\\fbox{ウ}')
-            .replaceAll('エ','\\fbox{エ}')
-            .replaceAll('オ','\\fbox{オ}')
+            .replaceAll(/[ア-オ]+/g,'\\fbox{$&}')
             .replaceAll('\\sqrt{','\\sqrt{⁬')
             .replaceAll(/d[A-Za-z]=/g,'\\,$&')
     );
