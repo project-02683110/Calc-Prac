@@ -56,7 +56,7 @@ async function fetchData() {
         disp();
         MathJax.typeset([document.getElementById('QP')]);
         MathJax.typeset([document.getElementById('OP')]);
-        document.getElementById('ldfade').classList.add('load_end');
+        document.getElementById('screen').classList.add('load_end');
     } catch (error) {
         console.log(error);
     }
