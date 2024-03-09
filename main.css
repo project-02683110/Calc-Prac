@@ -447,6 +447,22 @@ footer {
     border: none;
     border-radius: 50%;
 }
+.lnkbtn {
+    width: 200pt;
+    height: 40pt;
+    padding: auto 1em;
+    color: white;
+    font: 18pt 'Zen Kaku Gothic';
+    text-align: center;
+    vertical-align: middle;
+    background-color: black;
+    border: none;
+    border-radius: 20pt;
+}
+.lnkbtn span {
+    font: 24pt 'Material Symbols Outlined';
+    margin: auto 0.5em;
+}
 #toggleMemo {
     position: fixed;
     width: 40pt;
