@@ -318,9 +318,6 @@ sup {
     border: 2px black solid;
     border-radius: 50%;
 }
-a:not(.nlnkm) {
-    color: inherit;
-}
 a::after {
     color: grey;
     font-family: 'Material Symbols Outlined', sans-serif;
@@ -453,6 +450,7 @@ footer {
     padding: auto 1em;
     color: white;
     font: 16pt 'Zen Kaku Gothic';
+    text-decoration: none;
     text-align: center;
     vertical-align: middle;
     background-color: black;
