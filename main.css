@@ -318,7 +318,7 @@ sup {
     border: 2px black solid;
     border-radius: 50%;
 }
-a {
+a:not(.nlnkm) {
     color: inherit;
 }
 a::after {
@@ -452,7 +452,7 @@ footer {
     height: 40pt;
     padding: auto 1em;
     color: white;
-    font: 18pt 'Zen Kaku Gothic';
+    font: 16pt 'Zen Kaku Gothic';
     text-align: center;
     vertical-align: middle;
     background-color: black;
