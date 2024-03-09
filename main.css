@@ -318,8 +318,8 @@ sup {
     border: 2px black solid;
     border-radius: 50%;
 }
-a.nolink {
-    color: black;
+a {
+    color: inherit;
 }
 a::after {
     color: grey;
