@@ -318,6 +318,9 @@ sup {
     border: 2px black solid;
     border-radius: 50%;
 }
+a:not(.nlnkmk) {
+    color: inherit;
+}
 a::after {
     color: grey;
     font-family: 'Material Symbols Outlined', sans-serif;
