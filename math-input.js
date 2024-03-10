@@ -41,6 +41,7 @@ const wtChr = '??'
 let global;
 let history;
 let charge = false;
+let qesID;
 
 window.onload = function() {
     fetchData();
@@ -65,6 +66,7 @@ function reset() {
         let n = Math.floor(Math.random() * history.length);
         Q.innerHTML = QuestionsData[history[n]];
         history.splice(n, 1);
+        qesID = n;
     }
     let key = document.getElementsByClassName('tile');
     for (let i = 0; i < key.length; i++) {
@@ -235,4 +237,9 @@ function optionsShow(elem) {
 function aPlay(file) {
     document.getElementById(file).currentTime = 0;
     document.getElementById(file).play();
+}
+
+
+function getLink() {
+    return 'https://docs.google.com/forms/d/e/1FAIpQLSclF34RkIDHnX5qWQ_bXHl1pWboUG9_fK_z0n2el-ZZFLz-xA/viewform?usp=pp_url&entry.1149597675=https://calcprac.netlify.app/' + hFileName + '?id%3D' + qesID.toString();
 }

@@ -1,4 +1,4 @@
-let Qdata = [], Adata = [], Rdata = [], Ldata = [], Ans, Qes, Rng, Lev;
+let Idata = [], Qdata = [], Adata = [], Rdata = [], Ldata = [], Ans, Qes, Rng, Lev, qesID;
 const aiu = ['ア','イ','ウ','エ','オ'];
 
 String.prototype.kana = function(){
@@ -48,6 +48,7 @@ async function fetchData() {
         const jsondata = await fetch('https://script.google.com/macros/s/AKfycbzPa5cnSRdws8HQ1o-yQKz4qxLkH9j3ixnP_lDqiSuG6SzrTmY3hpx8p3ExBS5RLvBO/exec');
         const expdata = await jsondata.json();
         expdata.forEach(function (value, index) {
+            Idata[index] = value.ID;
             Qdata[index] = value.question;
             Adata[index] = value.answer;
             Rdata[index] = value.range;
@@ -64,6 +65,7 @@ async function fetchData() {
 
 function disp() {
     let QP = document.getElementById('QP'), LP = document.getElementById('LP'), r = Math.floor(Math.random() * Qdata.length);
+    qesID = Idata[r]
     Qes = Qdata[r];
     Ans = Adata[r];
     Rng = Rdata[r];
@@ -120,6 +122,10 @@ function deleteLatex() {
     IP.value = '';
     reload();
     IP.focus();
+}
+
+function getLink() {
+    return 'https://docs.google.com/forms/d/e/1FAIpQLSclF34RkIDHnX5qWQ_bXHl1pWboUG9_fK_z0n2el-ZZFLz-xA/viewform?usp=pp_url&entry.1149597675=https://calcprac.netlify.app/integer.html?id%3D' + qesID.toString();
 }
 
 window.onload = fetchData();
