@@ -323,10 +323,12 @@ a {
     text-decoration: none;
     font-style: italic;
 }
-a::after:not(.nlnkmk) {
+a:not(.nlnkmk)::after {
     color: grey;
     font-family: 'Material Symbols Outlined', sans-serif;
     font-size: 10px;
+    font-style: normal;
+    padding: 0 2pt;
     content: 'link';
 }
 .ex {
