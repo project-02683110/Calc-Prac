@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html oncopy="return false;" oncut="return false;" oncontextmenu="return false;" style="user-select: none;">
+<head>
+    <meta charset="utf-8">
+    <title>Calc-Prac</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="gray">
+    <link rel="canonical" href="https://calcprac.netlify.app/integrator.html">
+    <link rel="icon" type="image/svg" href="icon_chart.svg">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script lang="javascript" src="integrator.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]'],
+                    ['#', '#']
+                ]
+            },
+            options: {
+                enableMenu: false
+            }
+        };
+        </script>
+    <script id="MathJax-script" async src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>*{font-family:"Zen Old Mincho",serif;}</style>
+</head>
+<body>
+
+<header style="white-space: nowrap;">
+     けいさんれんしゅうソフト <wbr> Calc-Prac
+</header>
+
+<input type="checkbox" id="toggleMemo" title="メモを開く/閉じる">
+<div id="bgfade">
+    <textarea id="IP" placeholder="$～$や#～#でLaTeX数式" oninput="reload();"></textarea>
+    <div id="OP">\[Memo\]</div>
+    <button class="ltxbtn icon" style="top: 20pt;" onclick="insertLatex('#','#')" title="数式を挿入する">function</button>
+    <button class="ltxbtn" style="top: 80pt;" onclick="insertLatex('{','}')" title="括弧をつける">data_object</button>
+    <button class="ltxbtn" style="top: 140pt;" onclick="copyLatex()" title="問題を張り付ける">content_paste</button>
+    <button class="ltxbtn" style="top: 200pt;" onclick="deleteLatex()" title="メモを削除する">delete</button>
+</div>
+
+<style>
+    @keyframes load_anim {
+        0% {
+            height: 0%;
+        }
+        50% {
+            height: 100%;
+        }
+        100% {
+            height: 0%;
+        }
+    }
+    @keyframes fadeout {
+        from {
+            color: white;
+            border-color: white;
+            background-color: gray;
+            visibility: visible;
+        }
+        to {
+            color: transparent;
+            border-color: transparent;
+            background-color: transparent;
+            visibility: hidden;
+        }
+    }
+    #screen {
+        position: fixed;
+        display: flex;
+        z-index: 200;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: gray;
+        align-items: center;
+        justify-content: center;
+    }
+    #fixer {
+        position: relative;
+        height: 100pt;
+        width: 100pt;
+        flex-direction: row;
+        align-items: end;
+    }
+    .ldanim {
+        display: inline-block;
+        position: absolute;
+        width: 8pt;
+        height: 0%;
+        bottom: 0;
+        left: calc((var(--index)) * 10pt + 1pt);
+        font-family: sans-serif;
+        font-size: 10pt;
+        color: white;
+        text-align: center;
+        vertical-align: top;
+        overflow: hidden;
+        border: 2pt white solid;
+        border-radius: 3pt 3pt 0 0;
+        --delay: calc(cos(180deg / 10 * (10 - var(--index))) * 0.5s);
+        animation: load_anim 3s var(--delay) infinite;
+    }
+    .load_end {
+        animation: fadeout 1s forwards;
+    }
+    .load_end span{
+        visibility: hidden;
+    }
+
+</style>
+
+<div id="screen">
+    <span id="fixer">
+        <span class="ldanim" style="--index: 0;">N</span>
+        <span class="ldanim" style="--index: 1;">O</span>
+        <span class="ldanim" style="--index: 2;">W</span>
+        <span class="ldanim" style="--index: 3;">L</span>
+        <span class="ldanim" style="--index: 4;">O</span>
+        <span class="ldanim" style="--index: 5;">A</span>
+        <span class="ldanim" style="--index: 6;">D</span>
+        <span class="ldanim" style="--index: 7;">I</span>
+        <span class="ldanim" style="--index: 8;">N</span>
+        <span class="ldanim" style="--index: 9;">G</span>
+    </span>
+</div>
+
+<article>
+    <h3>以下の定積分をせよ。</h3>
+    <div id="QP">Loading...</div>
+    <div id="LP">altitudedouble_arrowsync</div>
+
+    <table align="center">
+        <tr>
+            <th>ア</th>
+            <th>イ</th>
+            <th>ウ</th>
+            <th>エ</th>
+            <th>オ</th>
+        </tr>
+        <tr>
+            <td>
+                <select id="ア" onchange="ansCheck();" disabled>
+                    <option value="" disabled selected>　　</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="0">0</option>
+                    <option value="-">－</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="n">n</option>
+                    <option value="π">π</option>
+                    <option value="θ">θ</option>
+                </select>
+            </td>
+            <td>
+                <select id="イ" onchange="ansCheck();" disabled>
+                    <option value="" disabled selected>　　</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="0">0</option>
+                    <option value="-">－</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="n">n</option>
+                    <option value="π">π</option>
+                    <option value="θ">θ</option>
+                </select>
+            </td>
+            <td>
+                <select id="ウ" onchange="ansCheck();" disabled>
+                    <option value="" disabled selected>　　</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="0">0</option>
+                    <option value="-">－</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="n">n</option>
+                    <option value="π">π</option>
+                    <option value="θ">θ</option>
+                </select>
+            </td>
+            <td>
+                <select id="エ" onchange="ansCheck();" disabled>
+                    <option value="" disabled selected>　　</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="0">0</option>
+                    <option value="-">－</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="n">n</option>
+                    <option value="π">π</option>
+                    <option value="θ">θ</option>
+                </select>
+            </td>
+            <td>
+                <select id="オ" onchange="ansCheck();" disabled>
+                    <option value="" disabled selected>　　</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="0">0</option>
+                    <option value="-">－</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="n">n</option>
+                    <option value="π">π</option>
+                    <option value="θ">θ</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <button class="lnkbtn" onclick="window.open('integrator-help.html');"><span>help</span>HELP</button>
+    <button class="lnkbtn" onclick="window.open(getLink());"><span>support_agent</span>SUPPORT</button>
+    <br><br>
+</article>
+
+<footer>
+    Created by しおたじゅく
+<!--
+    <audio id="T">
+        <source src="right.mp3" type="audio/mp3">
+    </audio>
+    <audio id="F">
+        <source src="wrong.mp3" type="audio/mp3">
+    </audio>
+-->
+</footer>
+
+</body>
+</html>
