@@ -125,7 +125,7 @@ function deleteLatex() {
 }
 
 function getLink() {
-    return 'https://docs.google.com/forms/d/e/1FAIpQLSclF34RkIDHnX5qWQ_bXHl1pWboUG9_fK_z0n2el-ZZFLz-xA/viewform?usp=pp_url&entry.1149597675=https://calcprac.netlify.app/integer.html?id%3D' + qesID.toString();
+    return 'https://docs.google.com/forms/d/e/1FAIpQLSclF34RkIDHnX5qWQ_bXHl1pWboUG9_fK_z0n2el-ZZFLz-xA/viewform?usp=pp_url&entry.1149597675=https://calcprac.netlify.app/integrator.html?id%3D' + qesID.toString();
 }
 
 window.onload = fetchData();
